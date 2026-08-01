@@ -227,6 +227,65 @@
     els.forEach(function (el) { io.observe(el); });
   }
 
+  /* ---------- in-page anchors (nav "Acquire", footer links) ---------- */
+  // Two things break a plain #hash jump on this page:
+  //   1. CSS scroll-behavior:smooth is speed-capped, so a jump like hero →
+  //      #acquire (~18,000px) crawls and never lands.
+  //   2. Images carry no intrinsic size, so lazy ones loading mid-scroll shift
+  //      the target's offset underneath us.
+  // So: animate it ourselves over a fixed duration, then re-aim once settled.
+  function initAnchors() {
+    var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var DURATION = 800;
+    var root = document.documentElement;
+
+    function offsetOf(el) {
+      // Stop short of the fixed nav (mirrors the scroll-margin-top in CSS).
+      var pad = Math.min(104, Math.max(78, window.innerWidth * 0.11));
+      var max = root.scrollHeight - window.innerHeight;
+      return Math.max(0, Math.min(max, el.getBoundingClientRect().top + window.pageYOffset - pad));
+    }
+
+    function jump(top) {
+      var prev = root.style.scrollBehavior;
+      root.style.scrollBehavior = "auto"; // the CSS default would re-smooth this
+      window.scrollTo(0, top);
+      root.style.scrollBehavior = prev;
+    }
+
+    function animate(el) {
+      var start = window.pageYOffset;
+      var t0 = performance.now();
+
+      (function step(now) {
+        var p = Math.min(1, (now - t0) / DURATION);
+        var eased = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
+        // Re-read the target each frame so late-loading images can't strand us.
+        jump(start + (offsetOf(el) - start) * eased);
+        if (p < 1) requestAnimationFrame(step);
+        else setTimeout(function () { jump(offsetOf(el)); }, 260);
+      })(t0);
+    }
+
+    document.addEventListener("click", function (ev) {
+      var a = ev.target.closest ? ev.target.closest('a[href^="#"]') : null;
+      if (!a) return;
+      var id = a.getAttribute("href").slice(1);
+      if (!id) return;
+      var target = document.getElementById(id);
+      if (!target) return;
+
+      ev.preventDefault();
+      // A section still waiting on the reveal observer must be made visible
+      // before we land on it, otherwise the user arrives at a blank stretch.
+      target.classList.add("is-in");
+      history.replaceState(null, "", "#" + id);
+
+      if (reduced) jump(offsetOf(target));
+      else animate(target);
+    });
+  }
+
   /* ---------- language toggle (EN / FR) ---------- */
   function initLang() {
     var btn = document.getElementById("langToggle");
@@ -307,6 +366,7 @@
 
   initLang();
   initRegion();
+  initAnchors();
   resize();
   initReveal();
   preload();

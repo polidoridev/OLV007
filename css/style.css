@@ -245,6 +245,9 @@ img{display:block}
   padding:clamp(64px,11vh,128px) clamp(20px,5vw,52px);
   border-bottom:1px solid var(--line);
 }
+/* The nav is fixed, so an anchor jump must stop short of it or the section
+   heading lands underneath the bar. */
+[id]{scroll-margin-top:clamp(78px,11vw,104px)}
 .sec:last-child{border-bottom:0}
 
 /* section header: mono index row + display title */
@@ -517,7 +520,21 @@ a.reg__wordmark:hover{text-decoration:underline}
 .acquire .lead{margin:0 auto 6px}
 .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
 .acquire__motto{margin:14px auto 0;color:var(--olive-soft);letter-spacing:.08em;font-size:clamp(.85rem,1.8vw,1.1rem);font-weight:700}
-.acquire__proof{margin:22px auto 0;color:var(--olive-soft);letter-spacing:.04em;font-size:clamp(.72rem,1.4vw,.9rem)}
+/* One bordered block per retailer, stacked: Amazon first, then Wild Game Cooking. */
+.stores{display:flex;flex-direction:column;gap:22px;margin:34px auto 0;max-width:760px}
+.store{
+  border:1px solid var(--line);padding:clamp(24px,4vw,38px) clamp(18px,4vw,32px);
+  display:flex;flex-direction:column;align-items:center;
+}
+.store__tag{
+  display:inline-block;
+  font-size:.66rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  background:var(--ink);color:var(--brine);padding:6px 14px;
+}
+.store__note{margin-top:14px;color:var(--muted);letter-spacing:.06em;font-size:clamp(.72rem,1.4vw,.85rem)}
+.store__proof{margin-top:18px;color:var(--olive-soft);letter-spacing:.04em;font-size:clamp(.7rem,1.3vw,.85rem)}
+.store .cta-row{margin-top:24px}
+.acquire > .cta-row{margin-top:28px}
 .btn{
   font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
   padding:16px 34px;border:1px solid var(--ink);transition:all .25s var(--ease);
