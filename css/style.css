@@ -683,3 +683,12 @@ a.reg__wordmark:hover{text-decoration:underline}
   .ambient.is-playing .ambient__vol,
   .ambient:hover .ambient__vol{width:64px}
 }
+
+/* Trademark follows the visible lettering inside the padded logo asset. */
+.brand-mark{position:relative;flex-shrink:0}
+.brand-mark__tm{
+  position:absolute;top:34%;right:4%;
+  font-family:Arial,sans-serif;font-size:8px;font-weight:400;
+  line-height:1;letter-spacing:0;color:var(--brine);
+}
+.loader__mark .brand-mark__tm{font-size:clamp(12px,3vw,18px)}
