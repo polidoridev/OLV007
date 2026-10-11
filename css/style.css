@@ -529,12 +529,14 @@ a.reg__wordmark:hover{text-decoration:underline}
 
 /* ---- 07 Acquire ---- */
 .acquire{text-align:center}
-.acquire .sec-head__title{margin:0 auto}
+.acquire .sec-head__title{margin:0 auto;max-width:20ch;font-size:clamp(2.5rem,6vw,4.75rem);text-wrap:balance}
 .acquire .lead{margin:0 auto 6px}
 .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
 .acquire__motto{margin:14px auto 0;color:var(--olive-soft);letter-spacing:.08em;font-size:clamp(.85rem,1.8vw,1.1rem);font-weight:700}
-/* One bordered block per retailer, stacked: Amazon first, then Wild Game Cooking. */
-.stores{display:flex;flex-direction:column;gap:22px;margin:34px auto 0;max-width:760px}
+.retail-region{margin:44px auto 0;max-width:880px}
+.retail-region__title{margin-bottom:22px;color:var(--olive);font-size:clamp(1.3rem,3vw,1.85rem);font-weight:700;line-height:1.2}
+/* Amazon leads the national retailers; local stockists follow by city. */
+.stores{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
 .store{
   border:1px solid var(--line);padding:clamp(24px,4vw,38px) clamp(18px,4vw,32px);
   display:flex;flex-direction:column;align-items:center;
@@ -544,15 +546,19 @@ a.reg__wordmark:hover{text-decoration:underline}
   font-size:.66rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
   background:var(--ink);color:var(--brine);padding:6px 14px;
 }
-.store--amazon{border:2px solid var(--olive);background:var(--brine-2)}
+.store--amazon{grid-column:1 / -1;border:2px solid var(--olive);background:var(--brine-2)}
+.store__title{font-size:clamp(1.25rem,2.5vw,1.65rem);font-weight:700;line-height:1.2;letter-spacing:-.02em}
 .store__amazon-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;letter-spacing:-.03em}
 .store__amazon-title span{font-size:.5em;font-weight:500;letter-spacing:0}
 .store__upcoming{align-self:stretch;border-top:1px solid var(--line);margin-top:28px;padding-top:24px}
-.store__upcoming h4{font-size:1.15rem;font-weight:600}
+.store__upcoming h5{font-size:1.15rem;font-weight:600}
 .store__upcoming p{margin-top:8px;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
 .store__note{margin-top:14px;color:var(--muted);letter-spacing:.06em;font-size:clamp(.72rem,1.4vw,.85rem)}
 .store__proof{margin-top:18px;color:var(--olive-soft);letter-spacing:.04em;font-size:clamp(.7rem,1.3vw,.85rem)}
 .store .cta-row{margin-top:24px}
+.store .btn{letter-spacing:.12em;padding-inline:22px}
+.store--local{background:var(--brine-2)}
+@media(max-width:780px){.stores{grid-template-columns:1fr}.store .cta-row{width:100%}}
 .acquire > .cta-row{margin-top:28px}
 .btn{
   font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
