@@ -544,6 +544,12 @@ a.reg__wordmark:hover{text-decoration:underline}
   font-size:.66rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
   background:var(--ink);color:var(--brine);padding:6px 14px;
 }
+.store--amazon{border:2px solid var(--olive);background:var(--brine-2)}
+.store__amazon-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;letter-spacing:-.03em}
+.store__amazon-title span{font-size:.5em;font-weight:500;letter-spacing:0}
+.store__upcoming{align-self:stretch;border-top:1px solid var(--line);margin-top:28px;padding-top:24px}
+.store__upcoming h4{font-size:1.15rem;font-weight:600}
+.store__upcoming p{margin-top:8px;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
 .store__note{margin-top:14px;color:var(--muted);letter-spacing:.06em;font-size:clamp(.72rem,1.4vw,.85rem)}
 .store__proof{margin-top:18px;color:var(--olive-soft);letter-spacing:.04em;font-size:clamp(.7rem,1.3vw,.85rem)}
 .store .cta-row{margin-top:24px}
@@ -557,24 +563,6 @@ a.reg__wordmark:hover{text-decoration:underline}
 .btn--ghost{background:transparent;color:var(--ink)}
 .btn--ghost:hover{background:var(--ink);color:var(--brine)}
 .btn.is-disabled{opacity:.45;pointer-events:none;cursor:not-allowed}
-/* Amazon store switcher (Canada / USA) - segmented toggle above the buy row. */
-.region-switch{
-  display:flex;width:fit-content;margin:24px auto 0;border:1px solid var(--ink);
-}
-.region-switch__opt{
-  display:inline-flex;align-items:center;gap:9px;
-  font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
-  padding:12px 22px;background:transparent;color:var(--ink);border:0;cursor:pointer;
-  transition:background .2s var(--ease),color .2s var(--ease);
-}
-.region-switch__opt + .region-switch__opt{border-left:1px solid var(--ink)}
-.region-switch__opt.is-active{background:var(--ink);color:var(--brine)}
-.region-switch__flag{font-size:1.2em;line-height:1}
-.region-soon{
-  margin:14px auto 0;color:var(--olive);
-  font-size:.7rem;letter-spacing:.08em;
-}
-
 /* ---- 08 Queries ---- */
 .faq{border-top:1px solid var(--ink)}
 .faq details{border-bottom:1px solid var(--line)}

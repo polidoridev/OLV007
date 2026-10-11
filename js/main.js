@@ -321,51 +321,11 @@
     }
   }
 
-  /* ---------- Amazon store switcher (CA / US) ---------- */
-  function initRegion() {
-    var sw = document.getElementById("regionSwitch");
-    if (!sw) return;
-    var opts = sw.querySelectorAll(".region-switch__opt");
-    var buys = document.querySelectorAll(".js-buy");
-    var soon = document.getElementById("regionSoon");
-
-    function apply(region) {
-      opts.forEach(function (o) {
-        var on = o.dataset.region === region;
-        o.classList.toggle("is-active", on);
-        o.setAttribute("aria-selected", on ? "true" : "false");
-      });
-
-      var missing = false;
-      buys.forEach(function (b) {
-        var url = region === "us" ? b.dataset.buyUs : b.dataset.buyCa;
-        if (url) {
-          b.href = url;
-          b.classList.remove("is-disabled");
-          b.removeAttribute("aria-disabled");
-        } else {
-          b.removeAttribute("href");
-          b.classList.add("is-disabled");
-          b.setAttribute("aria-disabled", "true");
-          missing = true;
-        }
-      });
-
-      if (soon) soon.hidden = !missing;
-    }
-
-    opts.forEach(function (o) {
-      o.addEventListener("click", function () { apply(o.dataset.region); });
-    });
-    apply("ca");
-  }
-
   /* ---------- boot ---------- */
   var y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
 
   initLang();
-  initRegion();
   initAnchors();
   resize();
   initReveal();

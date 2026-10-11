@@ -26,7 +26,7 @@
   <link rel="preload" as="audio" href="assets/audio/Tzivaeri-loop.m4a" />
   <link rel="preload" as="image" href="assets/frames/frame_0001.webp?v=2" media="(min-width: 781px)" />
   <link rel="preload" as="image" href="assets/frames/mobile/frame_0001.webp?v=2" media="(max-width: 780px)" />
-  <link rel="stylesheet" href="css/style.css?v=7" />
+  <link rel="stylesheet" href="css/style.css?v=8" />
 </head>
 <body>
 
@@ -60,7 +60,7 @@
         </svg>
       </a>
       <button class="nav__lang" id="langToggle" type="button" aria-label="Switch language">FR</button>
-      <a class="nav__cta" href="#acquire" data-fr="Acheter">Acquire</a>
+      <a class="nav__cta" href="#acquire" data-fr="Amazon.ca">Amazon.ca</a>
     </div>
   </header>
 
@@ -92,7 +92,7 @@
           <p class="hero__claim" data-fr="Le choix n°1 des barmans et mixologues!">Bartenders+Mixologists #1 choice!</p>
           <p class="hero__tag" data-fr="Saumure de Kalamata double-filtrée, conçue pour le dirty martini.">Double-filtered Kalamata brine, built for the dirty martini.</p>
           <div class="hero__cta">
-            <a class="btn btn--stamp" href="https://www.amazon.ca/Martini-Filtered-Kalamata-Storage-Ultimate/dp/B0BYLFGWF7" target="_blank" rel="noopener" data-fr="Acheter maintenant!">Buy now!</a>
+            <a class="btn btn--stamp" href="https://www.amazon.ca/Martini-Filtered-Kalamata-Storage-Ultimate/dp/B0BYLFGWF7" target="_blank" rel="noopener" data-fr="Acheter sur Amazon.ca">Shop on Amazon.ca</a>
             <a class="btn btn--ghost-light" href="#contact" data-fr="Gros volume">Wholesale</a>
           </div>
         </div>
@@ -120,6 +120,50 @@
 
   <!-- ====== PAPER DOSSIER ====== -->
   <main class="dossier">
+
+    <!-- SHOP - featured before the dossier -->
+    <section class="sec reveal acquire" id="acquire">
+      <div class="sec-head">
+        <div class="sec-head__row"><span class="rule"></span><span data-fr="Acheter OLV007">Shop OLV007</span><span class="rule"></span></div>
+        <h2 class="sec-head__title" data-fr="Retrouvez OLV007 sur Amazon.ca.">Find OLV007 on Amazon.ca.</h2>
+        <p class="acquire__motto mono" data-fr="🍸 « Être dirty n'a jamais goûté aussi propre » 🍸">🍸 “Being Dirty never tasted so clean” 🍸</p>
+      </div>
+      <p class="lead" data-fr="Ramenez OLV007 à la maison, ou installez-le derrière votre bar. Deux formats sur Amazon.ca, ou commandez sur Wild Game Cooking.">Bring OLV007 home, or get it behind your bar. Two formats on Amazon.ca, or order from Wild Game Cooking.</p>
+
+      <div class="stores">
+        <!-- Store 01 - Amazon Canada, with USA availability below -->
+        <div class="store store--amazon">
+          <h3 class="store__amazon-title">Amazon.ca <span data-fr="(Canada)">(Canada)</span></h3>
+          <p class="store__note mono" data-fr="Deux formats — 750 ml et 500 ml — expédiés par Amazon.">Two formats — 750 ml and 500 ml — shipped by Amazon.</p>
+
+          <div class="cta-row">
+            <a class="btn btn--stamp" href="https://www.amazon.ca/Martini-Filtered-Kalamata-Storage-Ultimate/dp/B0BYLFGWF7" target="_blank" rel="noopener" data-fr="Acheter 750 ml sur Amazon.ca">Buy 750 ml on Amazon.ca</a>
+            <a class="btn btn--stamp" href="https://www.amazon.ca/OLV-Martini-Cocktails-Kalamata-Martinis/dp/B0D346K1QR" target="_blank" rel="noopener" data-fr="Acheter 500 ml sur Amazon.ca">Buy 500 ml on Amazon.ca</a>
+          </div>
+          <p class="store__proof mono" data-fr="Des milliers de clients sur Amazon depuis son lancement en 2023.">Thousands of customers on Amazon since its introduction in 2023.</p>
+          <div class="store__upcoming">
+            <h4>Amazon.com <span data-fr="(É.-U.)">(USA)</span></h4>
+            <p data-fr="Bientôt disponible">Coming soon</p>
+          </div>
+        </div>
+
+        <!-- Store 02 - Wild Game Cooking (direct retail partner) -->
+        <div class="store">
+          <span class="store__tag mono">Wild Game Cooking</span>
+          <p class="store__note mono" data-fr="Commandez directement chez notre partenaire détaillant canadien.">Order direct from our Canadian retail partner.</p>
+
+          <div class="cta-row">
+            <a class="btn btn--stamp" href="https://wildgamecooking.ca/ols/products/olv007?utm_content=link_in_bio&amp;utm_medium=social&amp;utm_source=ig" target="_blank" rel="noopener" data-fr="Acheter sur Wild Game Cooking">Buy at Wild Game Cooking</a>
+          </div>
+          <p class="store__proof mono" data-fr="Expédié partout au Canada depuis wildgamecooking.ca.">Shipped across Canada from wildgamecooking.ca.</p>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn--ghost" href="#contact" data-fr="Demande gros volume">Wholesale enquiry</a>
+      </div>
+    </section>
+
 
     <!-- 01 - DOSSIER -->
     <section class="sec reveal" id="dossier">
@@ -944,55 +988,6 @@
       </div>
     </section>
 
-    <!-- 08 - ACQUIRE -->
-    <section class="sec reveal acquire" id="acquire">
-      <div class="sec-head">
-        <div class="sec-head__row"><span class="rule"></span><span data-fr="08 - Acheter">08 - Acquire</span><span class="rule"></span></div>
-        <h2 class="sec-head__title" data-fr="Salissez-le.">Make it dirty.</h2>
-        <p class="acquire__motto mono" data-fr="🍸 « Être dirty n'a jamais goûté aussi propre » 🍸">🍸 “Being Dirty never tasted so clean” 🍸</p>
-      </div>
-      <p class="lead" data-fr="Ramenez OLV007 à la maison, ou installez-le derrière votre bar. Deux formats sur Amazon, ou commandez sur Wild Game Cooking.">Bring OLV007 home, or get it behind your bar. Two formats on Amazon, or order from Wild Game Cooking.</p>
-
-      <div class="stores">
-        <!-- Store 01 - Amazon (CA / US switcher, two formats) -->
-        <div class="store">
-          <span class="store__tag mono">Amazon</span>
-          <p class="store__note mono" data-fr="Deux formats — 750 ml et 500 ml — expédiés par Amazon.">Two formats — 750 ml and 500 ml — shipped by Amazon.</p>
-
-          <div class="region-switch" id="regionSwitch" role="tablist" aria-label="Choose Amazon store">
-            <button class="region-switch__opt is-active" type="button" data-region="ca" role="tab" aria-selected="true">
-              <span class="region-switch__flag" aria-hidden="true">🇨🇦</span><span data-fr="Amazon Canada">Amazon Canada</span>
-            </button>
-            <button class="region-switch__opt" type="button" data-region="us" role="tab" aria-selected="false">
-              <span class="region-switch__flag" aria-hidden="true">🇺🇸</span><span data-fr="Amazon USA">Amazon USA</span>
-            </button>
-          </div>
-          <p class="region-soon mono" id="regionSoon" hidden data-fr="Amazon USA — bientôt disponible. En attendant, commandez sur Amazon Canada.">Amazon USA — coming soon. In the meantime, order on Amazon Canada.</p>
-
-          <div class="cta-row">
-            <a class="btn btn--stamp js-buy" data-buy-ca="https://www.amazon.ca/Martini-Filtered-Kalamata-Storage-Ultimate/dp/B0BYLFGWF7" href="https://www.amazon.ca/Martini-Filtered-Kalamata-Storage-Ultimate/dp/B0BYLFGWF7" target="_blank" rel="noopener" data-fr="Acheter 750 ml sur Amazon">Buy 750 ml on Amazon</a>
-            <a class="btn btn--stamp js-buy" data-buy-ca="https://www.amazon.ca/OLV-Martini-Cocktails-Kalamata-Martinis/dp/B0D346K1QR" href="https://www.amazon.ca/OLV-Martini-Cocktails-Kalamata-Martinis/dp/B0D346K1QR" target="_blank" rel="noopener" data-fr="Acheter 500 ml sur Amazon">Buy 500 ml on Amazon</a>
-          </div>
-          <p class="store__proof mono" data-fr="Des milliers de clients sur Amazon depuis son lancement en 2023.">Thousands of customers on Amazon since its introduction in 2023.</p>
-        </div>
-
-        <!-- Store 02 - Wild Game Cooking (direct retail partner) -->
-        <div class="store">
-          <span class="store__tag mono">Wild Game Cooking</span>
-          <p class="store__note mono" data-fr="Commandez directement chez notre partenaire détaillant canadien.">Order direct from our Canadian retail partner.</p>
-
-          <div class="cta-row">
-            <a class="btn btn--stamp" href="https://wildgamecooking.ca/ols/products/olv007?utm_content=link_in_bio&amp;utm_medium=social&amp;utm_source=ig" target="_blank" rel="noopener" data-fr="Acheter sur Wild Game Cooking">Buy at Wild Game Cooking</a>
-          </div>
-          <p class="store__proof mono" data-fr="Expédié partout au Canada depuis wildgamecooking.ca.">Shipped across Canada from wildgamecooking.ca.</p>
-        </div>
-      </div>
-
-      <div class="cta-row">
-        <a class="btn btn--ghost" href="#contact" data-fr="Demande gros volume">Wholesale enquiry</a>
-      </div>
-    </section>
-
     <!-- 09 - QUERIES -->
     <section class="sec reveal" id="queries">
       <div class="sec-head">
@@ -1095,7 +1090,7 @@
     <p class="footer__small">© <span id="year"></span> OLV007™ - Dossier N°007</p>
   </footer>
 
-  <script src="js/main.js?v=5"></script>
+  <script src="js/main.js?v=6"></script>
   <script src="js/ambient.js?v=4"></script>
 
   <!-- ====== INSTAGRAM REELS WALL ("06 - Reels") ======
