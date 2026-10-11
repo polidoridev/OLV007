@@ -369,6 +369,14 @@ img{display:block}
   transition:filter .25s var(--ease),opacity .25s var(--ease),transform .25s var(--ease);
 }
 .reg__item:hover .reg__logo img{filter:saturate(1);opacity:1;transform:scale(1.03)}
+/* Keep the original coloured artwork legible on the dark register. */
+.reg__logo img.reg__logo--light,
+.reg__item:hover .reg__logo img.reg__logo--light{filter:brightness(0) invert(1)}
+.reg__item--group{grid-column:1/-1}
+@media(min-width:600px){.reg__item--group{grid-column:span 2}}
+.reg__logo--group{flex-wrap:wrap;gap:24px 48px;padding:24px 4px}
+.reg__logo--group img:first-child{width:200px;max-width:65%}
+.reg__logo--group img:last-child{width:540px;max-height:none}
 .reg__name{
   font-family:var(--mono);font-size:.72rem;letter-spacing:.02em;line-height:1.3;color:rgba(255,255,255,.82);
   border-top:1px solid var(--line-dk);padding-top:12px;
@@ -380,6 +388,9 @@ img{display:block}
 }
 /* Distributor feature - same register card, full width. */
 .register--single{grid-template-columns:1fr}
+.register--single .reg__item{min-height:280px}
+.register--single .reg__logo{padding:0 4px}
+.register--single .reg__logo img{width:min(640px,100%);max-height:none;opacity:1}
 #reg-toronto .register{grid-template-columns:repeat(4,1fr)}
 /* A register entry that takes the entire row to itself. */
 .reg__item--full{grid-column:1/-1}
@@ -411,7 +422,8 @@ a.reg__wordmark:hover{text-decoration:underline}
   .reg__item{min-height:170px;padding:13px 13px 11px}
   .reg__logo img{max-height:78px}
   /* Let the lone distributor logo fill its full-width box on mobile. */
-  .register--single .reg__logo img{max-height:none;width:82%}
+  .register--single .reg__item{min-height:240px}
+  .register--single .reg__logo img{width:100%}
   .reg__name{font-size:.66rem}
   .reg__wordmark{font-size:1.12rem}
 }
