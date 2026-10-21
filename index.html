@@ -26,7 +26,7 @@
   <link rel="preload" as="audio" href="assets/audio/Tzivaeri-loop.m4a" />
   <link rel="preload" as="image" href="assets/frames/frame_0001.webp?v=2" media="(min-width: 781px)" />
   <link rel="preload" as="image" href="assets/frames/mobile/frame_0001.webp?v=2" media="(max-width: 780px)" />
-  <link rel="stylesheet" href="css/style.css?v=9" />
+  <link rel="stylesheet" href="css/style.css?v=10" />
 </head>
 <body>
 
@@ -60,7 +60,7 @@
         </svg>
       </a>
       <button class="nav__lang" id="langToggle" type="button" aria-label="Switch language">FR</button>
-      <a class="nav__cta" href="#acquire" data-fr="Amazon.ca">Amazon.ca</a>
+      <a class="nav__cta" href="#acquire"><span aria-hidden="true">🇨🇦</span> Amazon.ca</a>
     </div>
   </header>
 
@@ -88,12 +88,18 @@
         <p class="hero__file mono" data-fr="<span class=&quot;tick&quot;></span> Dossier <b>N°007</b> - Saumure d'olive / Montréal"><span class="tick"></span> Dossier <b>N°007</b> - Olive Brine / Montréal</p>
         <div class="hero__mid">
           <h1 class="hero__head" data-fr="Rehaussez votre Dirty Martini avec la saumure d'olive premium <span>OLV</span>">Enhance your Dirty Martini with <span>OLV</span> Premium Olive Brine</h1>
+          <p class="hero__tag hero__slogan">Being Dirty never tasted so clean</p>
           <p class="hero__made"><span data-fr="Faite avec">Made with</span><b data-fr="des olives Kalamata">Kalamata Olives</b></p>
           <p class="hero__claim" data-fr="Le choix n°1 des barmans et mixologues!">Bartenders+Mixologists #1 choice!</p>
           <p class="hero__tag" data-fr="Saumure de Kalamata double-filtrée, conçue pour le dirty martini.">Double-filtered Kalamata brine, built for the dirty martini.</p>
           <div class="hero__cta">
-            <a class="btn btn--stamp" href="https://www.amazon.ca/Martini-Filtered-Kalamata-Storage-Ultimate/dp/B0BYLFGWF7" target="_blank" rel="noopener" data-fr="Acheter sur Amazon.ca">Shop on Amazon.ca</a>
+            <a class="btn btn--stamp" href="https://www.amazon.ca/Martini-Filtered-Kalamata-Storage-Ultimate/dp/B0BYLFGWF7" target="_blank" rel="noopener"><span aria-hidden="true">🇨🇦</span> <span data-fr="Acheter sur Amazon.ca">Buy from Amazon.ca</span></a>
+            <span class="btn btn--ghost-light is-disabled hero__amazon-soon" aria-disabled="true"><span aria-hidden="true">🇺🇸</span> <span data-fr="Acheter sur Amazon.com (Bientôt!)">Buy from Amazon.com (Coming Soon!)</span></span>
             <a class="btn btn--ghost-light" href="#contact" data-fr="Gros volume">Wholesale</a>
+          </div>
+          <div class="hero__local">
+            <a href="#montreal-heading" data-fr="Acheter à Montréal">Buy in Montréal</a>
+            <a href="mailto:info@kafsupplies.com" data-fr="Acheter à Toronto">Buy in Toronto</a>
           </div>
         </div>
       </div>
@@ -171,11 +177,18 @@
         </div>
       </div>
 
+      <h3 class="business-heading" data-fr="PARTOUT AU CANADA<br>PROPRIÉTAIRES D’ENTREPRISE">ACROSS CANADA<br>BUSINESS OWNERS</h3>
       <div class="retail-region" aria-labelledby="montreal-heading">
-        <h3 class="retail-region__title" id="montreal-heading">Montréal</h3>
+        <h4 class="retail-region__title" id="montreal-heading">Montréal</h4>
         <div class="store store--local">
-          <h4 class="store__title">Sysco</h4>
-          <p class="store__note mono" data-fr="OLV007 · Article #7502663">OLV007 · Item #7502663</p>
+          <h5 class="store__title">Peter Gianopoulos</h5>
+          <div class="cta-row">
+            <a class="btn btn--stamp" href="mailto:peter@olv007.com" data-fr="Contactez-nous directement">Contact us directly</a>
+          </div>
+        </div>
+        <div class="store store--local">
+          <h5 class="store__title">Sysco</h5>
+          <p class="store__note store__note--item mono" data-fr="OLV007 · Article #7502663">OLV007 · Item #7502663</p>
           <div class="cta-row">
             <a class="btn btn--stamp" href="https://www.sysco.ca/fr/location/montreal" target="_blank" rel="noopener" data-fr="Visiter Sysco Montréal">Visit Sysco Montréal</a>
           </div>
@@ -183,12 +196,22 @@
       </div>
 
       <div class="retail-region" aria-labelledby="toronto-heading">
-        <h3 class="retail-region__title" id="toronto-heading">Toronto</h3>
+        <h4 class="retail-region__title" id="toronto-heading">Toronto</h4>
         <div class="store store--local">
-          <h4 class="store__title">KAF Bar and Restaurant Supplies</h4>
+          <h5 class="store__title">KAF Bar and Restaurant Supplies</h5>
           <p class="store__note mono">4140A Sladeview Crescent, Mississauga, ON</p>
           <div class="cta-row">
-            <a class="btn btn--stamp" href="https://www.google.com/maps/search/?api=1&amp;query=KAF+Bar+and+Restaurant+Supplies+4140A+Sladeview+Crescent+Mississauga&amp;query_place_id=ChIJGeYKFZU4K4gRnoCQlaVmAgs" target="_blank" rel="noopener" data-fr="Voir sur Google Maps">View on Google Maps</a>
+            <a class="btn btn--stamp" href="mailto:info@kafsupplies.com" data-fr="Écrire à KAF">Email KAF</a>
+            <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=KAF+Bar+and+Restaurant+Supplies+4140A+Sladeview+Crescent+Mississauga&amp;query_place_id=ChIJGeYKFZU4K4gRnoCQlaVmAgs" target="_blank" rel="noopener" data-fr="Voir sur Google Maps">View on Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="retail-region" aria-labelledby="gfs-heading">
+        <div class="store store--local">
+          <h4 class="store__title" id="gfs-heading">GFS — Gordon Food Service</h4>
+          <div class="cta-row">
+            <a class="btn btn--stamp" href="https://gfs.ca/en-ca/" target="_blank" rel="noopener" data-fr="Visiter GFS Canada">Visit GFS Canada</a>
           </div>
         </div>
       </div>
@@ -301,7 +324,7 @@
             <span class="reg__city">CAN</span>
             <span class="reg__logo"><img src="assets/logos/sysco.png" alt="Sysco Canada" /></span>
             <span class="reg__name">Sysco Canada <svg class="reg__flag" viewBox="0 0 1200 600" aria-hidden="true"><rect width="1200" height="600" fill="#fff"/><rect width="300" height="600" fill="#d52b1e"/><rect x="900" width="300" height="600" fill="#d52b1e"/><path fill="#d52b1e" d="M600 74l-44 82c-5 9-14 8-23 3l-32-16 24 126c5 23-11 23-19 13l-56-62-9 32c-1 4-6 9-12 8l-70-15 18 67c4 15 7 21-4 25l-25 12 121 98c5 4 7 11 5 17l-11 34c42-5 79-12 121-16 4 0 10 6 10 10l-6 124h21l-4-124c0-4 6-10 10-10 42 4 79 11 121 16l-11-34c-2-6 0-13 5-17l121-98-25-12c-11-4-8-10-4-25l18-67-70 15c-6 1-11-4-12-8l-9-32-56 62c-8 10-24 10-19-13l24-126-32 16c-9 5-18 6-23-3z"/></svg></span>
-            <span class="reg__meta"><span data-fr="Marque">Brand</span> OLV007 · <span data-fr="Article">Item</span> #7502663</span>
+            <span class="reg__meta"><span data-fr="Marque">Brand</span> OLV007 · <strong class="sysco-item"><span data-fr="Article">Item</span> #7502663</strong></span>
           </li>
         </ul>
       </div>
@@ -440,14 +463,8 @@
             <span class="reg__logo"><img src="assets/logos/7.webp" alt="Mythos Ouzeri" /></span>
             <span class="reg__name">Mythos Ouzeri</span>
           </li>
-          <li class="reg__item">
-            <span class="reg__no">N°22</span>
-            <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/8.webp" alt="Monza" /></span>
-            <span class="reg__name">Monza</span>
-          </li>
           <li class="reg__item reg__item--group">
-            <span class="reg__no">N°23</span>
+            <span class="reg__no">N°22</span>
             <span class="reg__city">MTL</span>
             <span class="reg__group-brand"><img src="assets/logos/jegantic.png" width="320" height="78" alt="Jegantic" /></span>
             <span class="reg__logo reg__logo--group">
@@ -457,6 +474,12 @@
               <img src="assets/logos/hang.png" width="161" height="131" alt="Hằng" />
             </span>
             <span class="reg__name">Jegantic · Bambino · Yoko Luna · Bord'Elle · Hằng</span>
+          </li>
+          <li class="reg__item">
+            <span class="reg__no">N°23</span>
+            <span class="reg__city">MTL</span>
+            <span class="reg__logo"><img src="assets/logos/8.webp" alt="Monza" /></span>
+            <span class="reg__name">Monza</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°24</span>
@@ -828,15 +851,15 @@
       </div>
 
       <div class="reg-sub" id="reg-toronto">
-        <div class="reg-sub__head"><span>Toronto</span><span class="rule"></span><span data-fr="16 entrées">16 entries</span></div>
+        <div class="reg-sub__head"><span>Toronto</span><span class="rule"></span><span data-fr="20 entrées">20 entries</span></div>
         <ul class="register">
-          <li class="reg__item">
+          <li class="reg__item reg__item--full reg__item--feature">
             <span class="reg__no">N°01</span>
             <span class="reg__city">GTA</span>
             <span class="reg__logo"><a href="https://kafsupplies.com/" target="_blank" rel="noopener"><img src="assets/logos/96.webp" alt="KAF" /></a></span>
             <span class="reg__name"><a class="reg__link" href="https://kafsupplies.com/" target="_blank" rel="noopener">KAF</a> — restaurant and bar distribution for the GTA</span>
           </li>
-          <li class="reg__item">
+          <li class="reg__item reg__item--full reg__item--feature">
             <span class="reg__no">N°02</span>
             <span class="reg__city">YYZ</span>
             <span class="reg__logo"><img src="assets/logos/37a.webp" alt="Estiatorio Milos" /></span>
@@ -857,8 +880,8 @@
           <li class="reg__item">
             <span class="reg__no">N°05</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/57.webp" alt="Kouklas" /></span>
-            <span class="reg__name">Kouklas</span>
+            <span class="reg__logo"><img src="assets/logos/57.webp" alt="Bar Koukla" /></span>
+            <span class="reg__name">Bar Koukla</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°06</span>
@@ -925,6 +948,30 @@
             <span class="reg__city">YYZ</span>
             <span class="reg__logo"><img src="assets/logos/68.webp" alt="Via Allegro" /></span>
             <span class="reg__name">Via Allegro</span>
+          </li>
+          <li class="reg__item">
+            <span class="reg__no">N°17</span>
+            <span class="reg__city">YYZ</span>
+            <span class="reg__logo"><img src="assets/logos/queens-harbour.png" width="117" height="100" alt="Queens Harbour" loading="lazy" /></span>
+            <span class="reg__name">Queens Harbour</span>
+          </li>
+          <li class="reg__item">
+            <span class="reg__no">N°18</span>
+            <span class="reg__city">YYZ</span>
+            <span class="reg__logo"><img class="reg__logo--light" src="assets/logos/agora.png" width="260" height="105" alt="Agora" loading="lazy" /></span>
+            <span class="reg__name">Agora</span>
+          </li>
+          <li class="reg__item">
+            <span class="reg__no">N°19</span>
+            <span class="reg__city">YYZ</span>
+            <span class="reg__logo"><img src="assets/logos/trapezi.png" width="1152" height="587" alt="Trapezi" loading="lazy" /></span>
+            <span class="reg__name" data-fr="Trapezi · Salle à manger privée">Trapezi · Private Dining</span>
+          </li>
+          <li class="reg__item">
+            <span class="reg__no">N°20</span>
+            <span class="reg__city">YYZ</span>
+            <span class="reg__logo"><img src="assets/logos/58.webp" width="1327" height="300" alt="Mamakas Summerhill" loading="lazy" /></span>
+            <span class="reg__name" data-fr="Mamakas Summerhill · À venir">Mamakas Summerhill · Coming Soon</span>
           </li>
         </ul>
       </div>
@@ -1104,18 +1151,6 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__posts-wrap">
-      <div class="footer__posts-head">
-        <span class="mono" data-fr="Suivez-nous sur Instagram">Follow us on Instagram</span>
-        <a class="mono" href="https://instagram.com/olv007_" target="_blank" rel="noopener">@olv007_</a>
-      </div>
-      <div class="footer__posts">
-        <a class="footer__post" href="https://instagram.com/olv007_" target="_blank" rel="noopener" aria-label="OLV007 on Instagram"><img src="assets/instagram/ins1.webp" alt="OLV007 dirty martinis" loading="lazy" /></a>
-        <a class="footer__post" href="https://instagram.com/olv007_" target="_blank" rel="noopener" aria-label="OLV007 on Instagram"><img src="assets/instagram/ins2.webp" alt="Follow OLV007 on Instagram" loading="lazy" /></a>
-        <a class="footer__post" href="https://instagram.com/olv007_" target="_blank" rel="noopener" aria-label="OLV007 on Instagram"><img src="assets/instagram/ins3.webp" alt="OLV007 olive brine and martini" loading="lazy" /></a>
-        <a class="footer__post" href="https://instagram.com/olv007_" target="_blank" rel="noopener" aria-label="OLV007 on Instagram"><img src="assets/instagram/ins4.webp" alt="OLV007 dirty martini close-up" loading="lazy" /></a>
-      </div>
-    </div>
     <div class="footer__inner">
       <div class="footer__mark brand-mark"><img src="assets/img/logo-light.png" alt="OLV007" /><sup class="brand-mark__tm">™</sup></div>
       <div class="footer__meta" data-fr="Saumure d'olive premium<br/>Montréal, Québec · Est. 2023<br/>Veuillez consommer de façon responsable">
@@ -1123,14 +1158,6 @@
         Montréal, Québec · Est. 2023<br/>
         Please enjoy responsibly
       </div>
-      <a class="footer__ig" href="https://instagram.com/olv007_" target="_blank" rel="noopener" aria-label="OLV007 on Instagram">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-        </svg>
-        <span>@olv007_</span>
-      </a>
     </div>
     <div class="footer__rule"></div>
     <p class="footer__small">© <span id="year"></span> OLV007™ - Dossier N°007</p>
