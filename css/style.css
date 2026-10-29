@@ -183,6 +183,7 @@ img{display:block}
   color:rgba(255,255,255,.92);
 }
 .hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px;pointer-events:auto}
+.amazon-flag{display:inline-block;font-size:1.5em;line-height:1;vertical-align:middle;flex-shrink:0}
 .hero__local{display:flex;flex-wrap:wrap;gap:4px 24px;margin-top:12px;pointer-events:auto}
 .hero__local a{
   display:inline-flex;align-items:center;min-height:44px;
@@ -669,27 +670,30 @@ a.reg__wordmark:hover{text-decoration:underline}
 .ambient.is-playing .ambient__icon--muted{display:none}
 .ambient.is-playing .ambient__icon--on{display:block}
 .ambient.is-playing .ambient__toggle{color:var(--olive-soft)}
-/* Volume slider slides open only while playing / hover */
-.ambient__vol{
-  width:0;opacity:0;height:3px;margin:0;cursor:pointer;
-  -webkit-appearance:none;appearance:none;
-  background:rgba(255,255,255,.28);border-radius:3px;
-  transition:width .35s var(--ease),opacity .25s ease,margin .35s var(--ease);
-}
-.ambient.is-playing .ambient__vol,
-.ambient:hover .ambient__vol{width:84px;opacity:1;margin:0 10px 0 6px}
-.ambient__vol::-webkit-slider-thumb{
-  -webkit-appearance:none;appearance:none;width:13px;height:13px;border-radius:50%;
-  background:var(--olive-soft);border:2px solid #fff;cursor:pointer;
-}
-.ambient__vol::-moz-range-thumb{
-  width:13px;height:13px;border-radius:50%;
-  background:var(--olive-soft);border:2px solid #fff;cursor:pointer;
-}
-@media (max-width:780px){
+/* Entry stays above the loading sequence; the native dialog traps focus. */
+body:has(.entry[open]){overflow:hidden}
+.entry{position:fixed;inset:0;width:100%;max-width:none;height:100%;height:100dvh;max-height:none;border:0;padding:24px;background:#080a07;color:var(--brine);margin:0}
+.entry::backdrop{background:#080a07}
+.entry[open]{display:grid;place-items:center}
+.entry__content{width:min(600px,100%);text-align:center;padding:24px 0}
+.entry__logo{width:180px;margin:0 auto 30px}
+.entry .mono{color:var(--olive-soft)}
+.entry h2{font-size:clamp(42px,8vw,76px);line-height:1.05;letter-spacing:-.045em;margin:22px 0 18px}
+.entry__content>p:not(.mono){line-height:1.6}
+.entry__choices{display:flex;justify-content:center;gap:12px;margin:32px 0}
+.entry__choices .btn{cursor:pointer}
+.entry__track{font-size:14px}
+.entry__track span{color:#b6b9b2}
+.entry__note{font-size:12px;color:#a2a69c;margin-top:10px}
+.entry button:focus-visible,.ambient button:focus-visible,.ambient a:focus-visible{outline:2px solid var(--olive-soft);outline-offset:5px}
+.ambient__vol{width:80px;margin:0 10px 0 6px;accent-color:var(--olive-soft);cursor:pointer}
+.ambient__vol:focus-visible{outline:2px solid var(--olive-soft);outline-offset:5px}
+.ambient__status{position:absolute;bottom:62px;left:0;width:min(280px,calc(100vw - 36px));padding:12px;border:1px solid var(--line-dk);border-radius:10px;background:#11140e;color:white;font-size:12px;line-height:1.5}
+.ambient__status[hidden]{display:none}
+@media(max-width:540px){
+  .entry__choices{flex-direction:column}
+  .entry__choices .btn{width:100%}
   .ambient{left:14px;bottom:14px}
-  .ambient.is-playing .ambient__vol,
-  .ambient:hover .ambient__vol{width:64px}
 }
 
 /* Trademark follows the visible lettering inside the padded logo asset. */

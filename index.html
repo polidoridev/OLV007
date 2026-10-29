@@ -23,10 +23,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 
-  <link rel="preload" as="audio" href="assets/audio/Tzivaeri-loop.m4a" />
   <link rel="preload" as="image" href="assets/frames/frame_0001.webp?v=2" media="(min-width: 781px)" />
   <link rel="preload" as="image" href="assets/frames/mobile/frame_0001.webp?v=2" media="(max-width: 780px)" />
-  <link rel="stylesheet" href="css/style.css?v=10" />
+  <link rel="stylesheet" href="css/style.css?v=12" />
 </head>
 <body>
 
@@ -60,12 +59,26 @@
         </svg>
       </a>
       <button class="nav__lang" id="langToggle" type="button" aria-label="Switch language">FR</button>
-      <a class="nav__cta" href="#acquire"><span aria-hidden="true">🇨🇦</span> Amazon.ca</a>
+      <a class="nav__cta" href="https://www.amazon.ca/stores/OLV007Inc/page/A349D5D7-C140-4843-9BE3-05945CE65E5B" target="_blank" rel="noopener"><span class="amazon-flag" aria-hidden="true">🇨🇦</span> Amazon.ca</a>
     </div>
   </header>
 
-  <!-- ====== AMBIENT SOUNDTRACK (crossfade loop · user-controlled) ====== -->
-  <div class="ambient" id="ambient" data-loop-start="0">
+  <!-- ====== ENTRY / SOUNDTRACK ====== -->
+  <dialog class="entry" id="entry" aria-labelledby="entryTitle" aria-describedby="entryDescription">
+    <div class="entry__content">
+      <img class="entry__logo" src="assets/img/logo-light.png" alt="OLV007" />
+      <p class="mono" data-fr="Montréal · Dossier N°007">Montréal · Dossier N°007</p>
+      <h2 id="entryTitle" data-fr="À vous de donner le ton.">Set the mood.</h2>
+      <p id="entryDescription" data-fr="Un dirty martini. La bonne musique. Entrez comme vous aimez.">A dirty martini. The right soundtrack. Enter your way.</p>
+      <div class="entry__choices">
+        <button class="btn btn--stamp" id="enterMusic" type="button" data-fr="Entrer avec musique">Enter with music</button>
+        <button class="btn btn--ghost-light" id="enterSilent" type="button" autofocus data-fr="Entrer sans musique">Enter without music</button>
+      </div>
+      <p class="entry__track">Casino De Capri <span>— Léa Breuillier</span></p>
+      <p class="entry__note" data-fr="Vous pouvez activer ou désactiver la musique à tout moment.">You can turn the music on or off anytime.</p>
+    </div>
+  </dialog>
+  <div class="ambient" id="ambient" >
     <button class="ambient__toggle" id="ambientToggle" type="button" aria-pressed="false" aria-label="Play background music" title="Background music">
       <svg class="ambient__icon ambient__icon--muted" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M11 5 6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>
@@ -75,6 +88,7 @@
       </svg>
     </button>
     <input class="ambient__vol" id="ambientVol" type="range" min="0" max="100" value="18" aria-label="Music volume" />
+    <p class="ambient__status" id="musicStatus" role="status" hidden></p>
   </div>
 
   <!-- ====== FIXED FRAME CANVAS (scrubs the pour, then freezes) ====== -->
@@ -93,8 +107,8 @@
           <p class="hero__claim" data-fr="Le choix n°1 des barmans et mixologues!">Bartenders+Mixologists #1 choice!</p>
           <p class="hero__tag" data-fr="Saumure de Kalamata double-filtrée, conçue pour le dirty martini.">Double-filtered Kalamata brine, built for the dirty martini.</p>
           <div class="hero__cta">
-            <a class="btn btn--stamp" href="https://www.amazon.ca/Martini-Filtered-Kalamata-Storage-Ultimate/dp/B0BYLFGWF7" target="_blank" rel="noopener"><span aria-hidden="true">🇨🇦</span> <span data-fr="Acheter sur Amazon.ca">Buy from Amazon.ca</span></a>
-            <span class="btn btn--ghost-light is-disabled hero__amazon-soon" aria-disabled="true"><span aria-hidden="true">🇺🇸</span> <span data-fr="Acheter sur Amazon.com (Bientôt!)">Buy from Amazon.com (Coming Soon!)</span></span>
+            <a class="btn btn--stamp" href="https://www.amazon.ca/stores/OLV007Inc/page/A349D5D7-C140-4843-9BE3-05945CE65E5B" target="_blank" rel="noopener"><span class="amazon-flag" aria-hidden="true">🇨🇦</span> <span data-fr="Acheter sur Amazon.ca">Buy from Amazon.ca</span></a>
+            <a class="btn btn--ghost-light hero__amazon-soon" href="https://www.amazon.com/stores/OLV007Inc/page/8BA86DA8-5D35-43DA-B5A7-29D7D781D91D?lp_asin=B0BYLFGWF7&amp;ref_=ast_bln" target="_blank" rel="noopener"><span class="amazon-flag" aria-hidden="true">🇺🇸</span> <span data-fr="Amazon USA — Produits bientôt disponibles">Amazon USA — Products coming soon</span></a>
             <a class="btn btn--ghost-light" href="#contact" data-fr="Gros volume">Wholesale</a>
           </div>
           <div class="hero__local">
@@ -1159,7 +1173,7 @@
   </footer>
 
   <script src="js/main.js?v=6"></script>
-  <script src="js/ambient.js?v=4"></script>
+  <script src="js/ambient.js?v=7"></script>
 
   <!-- ====== INSTAGRAM REELS WALL ("06 - Reels") ======
        Paste the full URL of each reel you want shown, e.g.:
