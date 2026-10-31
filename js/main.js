@@ -1,6 +1,6 @@
 /* ============================================================
    OLV007 - scroll-scrub frame engine
-   Apple-style: preload every frame, pre-decode, paint to <canvas>
+   Load frames near the scroll position, pre-decode, paint to <canvas>
    on scroll via rAF. No <video> seeking → no flick-scroll lag.
    ============================================================ */
 (function () {
@@ -16,7 +16,7 @@
   var isMobile = (window.matchMedia &&
       window.matchMedia("(max-width: 780px), (pointer: coarse)").matches) ||
       Math.min(window.innerWidth, window.innerHeight) <= 820;
-  var FRAME_DIR = isMobile ? "assets/frames/mobile/" : "assets/frames/";
+  var FRAME_DIR = isMobile ? "/assets/frames/mobile/" : "/assets/frames/";
   // Bump this whenever the frame images are replaced. The frames are cached
   // `immutable` for a year, so reusing the same filenames would otherwise serve
   // stale frames from the browser cache - this query string forces a refetch.
@@ -25,17 +25,9 @@
     return FRAME_DIR + "frame_" + String(i + 1).padStart(4, "0") + ".webp?v=" + FRAME_VERSION;
   };
 
-  // Load every frame (incl. on mobile) so the pour scrubs smoothly - the
-  // progressive reveal below keeps the first paint fast despite this.
-  var loadIndices = [];
-  for (var li = 0; li < FRAME_COUNT; li++) loadIndices.push(li);
-  var TOTAL_TO_LOAD = loadIndices.length;
-
-  // Reveal the page once enough frames are ready instead of waiting for all
-  // of them - early frames arrive first, so this is plenty to begin the pour
-  // while the rest stream in behind the scenes.
-  var REVEAL_AT = Math.max(8, Math.ceil(TOTAL_TO_LOAD * 0.45));
-  var REVEAL_TIMEOUT = 9000; // hard fallback so a slow/failed asset never traps the user
+  // Keep all 145 original frames; request only the first ten on arrival.
+  var INITIAL_FRAMES = 10;
+  var MAX_REQUESTS = 4;
 
   /* ---------- elements ---------- */
   var body = document.body;
@@ -52,11 +44,13 @@
   var loaderFill = document.getElementById("loaderFill");
   var loaderPct = document.getElementById("loaderPct");
 
-  body.classList.add("loading");
+
 
   /* ---------- state ---------- */
   var images = new Array(FRAME_COUNT);
-  var loadedCount = 0;
+  var pending = [];
+  var requested = new Set();
+  var activeRequests = 0;
   var renderedFrame = -1;
   var currentFrame = 0;
   var dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -131,6 +125,7 @@
     ticking = false;
     var s = frameFromScroll();
     currentFrame = s.frame;
+    queueFrames(currentFrame, s.p > 0 ? 30 : INITIAL_FRAMES - 1);
     if (currentFrame !== renderedFrame) draw(currentFrame);
 
     // hero text fades out within the first ~12% of the scrub
@@ -159,21 +154,53 @@
     }
   }
 
-  /* ---------- preloading (parallel, with progress) ---------- */
-  var revealed = false;
-
-  function setProgress(n) {
-    var pct = Math.round((n / TOTAL_TO_LOAD) * 100);
-    if (pct > 100) pct = 100;
-    loaderFill.style.width = pct + "%";
-    loaderPct.textContent = pct + "%";
+  /* ---------- bounded, scroll-driven frame loading ---------- */
+  function queueFrames(index, ahead) {
+    // Re-prioritize on fast scrolls, including jumps back to the beginning.
+    pending = [];
+    for (var distance = 0; distance <= ahead; distance++) {
+      [index + distance, index - distance].forEach(function (candidate) {
+        if (candidate >= 0 && candidate < FRAME_COUNT &&
+            !requested.has(candidate) && pending.indexOf(candidate) === -1) {
+          pending.push(candidate);
+        }
+      });
+    }
+    pumpFrames();
   }
 
-  function reveal() {
-    if (revealed) return;
-    revealed = true;
-    resize();
-    draw(0);
+  function pumpFrames() {
+    while (activeRequests < MAX_REQUESTS && pending.length) {
+      loadFrame(pending.shift());
+    }
+  }
+
+  function loadFrame(index) {
+    requested.add(index);
+    activeRequests++;
+    var img = new Image();
+    img.decoding = "async";
+    if (index === 0) img.fetchPriority = "high";
+    images[index] = img;
+    function done() {
+      activeRequests--;
+      if (img.naturalWidth) {
+        imgW = img.naturalWidth;
+        imgH = img.naturalHeight;
+        draw(currentFrame);
+      }
+      pumpFrames();
+    }
+    img.onload = function () {
+      if (img.decode) img.decode().then(done, done);
+      else done();
+    };
+    img.onerror = done;
+    img.src = framePath(index);
+  }
+
+  function preload() {
+    // Content is available immediately, even when media is slow or unavailable.
     loader.classList.add("is-hidden");
     body.classList.remove("loading");
     update();
@@ -182,30 +209,30 @@
     window.addEventListener("orientationchange", function () { resize(); draw(currentFrame); });
   }
 
-  function preload() {
-    function bump() {
-      loadedCount++;
-      setProgress(loadedCount);
-      if (loadedCount >= REVEAL_AT) reveal();
+  function initFilm() {
+    var video = document.querySelector(".filmstrip__video");
+    if (!video) return;
+    var connection = navigator.connection;
+    if ((connection && (connection.saveData || /(^|-)2g$/.test(connection.effectiveType))) ||
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var source = video.querySelector("source");
+    var started = false;
+    function play() {
+      if (!started) {
+        source.src = isMobile ? source.dataset.mobileSrc : source.dataset.src;
+        video.load();
+        started = true;
+      }
+      video.play().catch(function () { /* Keep the poster if autoplay is unavailable. */ });
     }
-
-    loadIndices.forEach(function (idx) {
-      var img = new Image();
-      img.decoding = "async";
-      img.onload = function () {
-        if (idx === 0) { imgW = img.naturalWidth; imgH = img.naturalHeight; }
-        // pre-decode so the first paint of each frame is instant
-        if (img.decode) {
-          img.decode().then(bump, bump);
-        } else { bump(); }
-      };
-      img.onerror = bump;
-      img.src = framePath(idx);
-      images[idx] = img;
-    });
-
-    // Safety net: never let a stalled asset trap the loader forever.
-    setTimeout(reveal, REVEAL_TIMEOUT);
+    if (!("IntersectionObserver" in window)) return;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) play();
+        else video.pause();
+      });
+    }, { rootMargin: "300px" });
+    observer.observe(video);
   }
 
   /* ---------- scroll-reveal for content sections ---------- */
@@ -286,39 +313,13 @@
     });
   }
 
-  /* ---------- language toggle (EN / FR) ---------- */
+  /* ---------- language preference (the URL controls the page language) ---------- */
   function initLang() {
-    var btn = document.getElementById("langToggle");
-    var nodes = document.querySelectorAll("[data-fr]");
-    if (!nodes.length) return;
-
-    // Capture the original (English) markup once.
-    nodes.forEach(function (el) {
-      if (el.dataset.en == null) el.dataset.en = el.innerHTML;
+    var link = document.getElementById("langToggle");
+    if (!link) return;
+    link.addEventListener("click", function () {
+      try { localStorage.setItem("olvLang", link.hreflang.slice(0, 2)); } catch (e) {}
     });
-
-    function apply(lang) {
-      var fr = lang === "fr";
-      nodes.forEach(function (el) {
-        el.innerHTML = fr ? el.dataset.fr : el.dataset.en;
-      });
-      document.documentElement.lang = fr ? "fr" : "en";
-      if (btn) {
-        btn.textContent = fr ? "EN" : "FR";
-        btn.setAttribute("aria-label", fr ? "Passer à l'anglais" : "Switch to French");
-      }
-      try { localStorage.setItem("olvLang", lang); } catch (e) {}
-    }
-
-    var saved;
-    try { saved = localStorage.getItem("olvLang"); } catch (e) {}
-    apply(saved === "fr" ? "fr" : "en");
-
-    if (btn) {
-      btn.addEventListener("click", function () {
-        apply(document.documentElement.lang === "fr" ? "en" : "fr");
-      });
-    }
   }
 
   /* ---------- boot ---------- */
@@ -329,5 +330,6 @@
   initAnchors();
   resize();
   initReveal();
+  initFilm();
   preload();
 })();

@@ -9,13 +9,13 @@
   var status = document.getElementById("musicStatus");
   if (!entry || !wrap) return;
 
-  var player = new Audio("assets/audio/casino-de-capri-loop.wav");
+  var player = new Audio("/assets/audio/casino-de-capri-loop.wav");
   player.preload = "none";
   player.loop = true;
   player.volume = Number(volume.value) / 100;
   var enabled = false;
   var generation = 0;
-  function words(en, fr) { return document.documentElement.lang === "fr" ? fr : en; }
+  function words(en, fr) { return document.documentElement.lang.startsWith("fr") ? fr : en; }
   function paint() {
     wrap.classList.toggle("is-playing", !player.paused);
     toggle.setAttribute("aria-pressed", String(enabled));
@@ -78,8 +78,11 @@
   document.getElementById("enterMusic").addEventListener("click", function () { enter(true); });
   document.getElementById("enterSilent").addEventListener("click", function () { enter(false); });
   entry.addEventListener("cancel", function (event) { event.preventDefault(); enter(false); });
-  toggle.addEventListener("click", function () { setMusic(!enabled); });
+  toggle.addEventListener("click", function () {
+    if (enabled) setMusic(false);
+    else entry.showModal();
+  });
   document.getElementById("langToggle").addEventListener("click", paint);
   paint();
-  entry.showModal();
+  // Offer the soundtrack through the existing music control after the hero is visible.
 })();

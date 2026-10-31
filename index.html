@@ -1,38 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OLV007 - Olive Brine for the Dirty Martini · Dossier N°007</title>
-  <meta name="description" content="OLV007 is a double-filtered Greek Kalamata olive brine built for the dirty martini. Made in Kalamata, Greece since 2023 and poured behind 50+ bars." />
+  <meta name="description" content="OLV007 is a double-filtered Greek Kalamata olive brine built for the dirty martini. Poured in 100+ bars and restaurants. Made in Kalamata, Greece · Montréal brand since 2023." />
   <meta name="theme-color" content="#0b0c08" />
 
   <!-- Favicon (the "O" mark) -->
-  <link rel="icon" href="favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/icon-192.png" />
-  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/icon-192.png" />
+  <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="OLV007 - Olive Brine for the Dirty Martini" />
-  <meta property="og:description" content="Double-filtered Kalamata brine, built for the dirty martini. Montréal, est. 2023." />
-  <meta property="og:image" content="assets/img/martini-bg.jpg" />
+  <meta property="og:description" content="OLV007 is a double-filtered Greek Kalamata olive brine built for the dirty martini. Poured in 100+ bars and restaurants. Made in Kalamata, Greece · Montréal brand since 2023." />
+  <meta property="og:image" content="https://www.olv007.com/assets/img/martini-bg.jpg" />
   <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.olv007.com/" />
+  <link rel="alternate" hreflang="en-CA" href="https://www.olv007.com/" />
+  <link rel="alternate" hreflang="fr-CA" href="https://www.olv007.com/fr/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.olv007.com/" />
+  <meta property="og:url" content="https://www.olv007.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:locale:alternate" content="fr_CA" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 
-  <link rel="preload" as="image" href="assets/frames/frame_0001.webp?v=2" media="(min-width: 781px)" />
-  <link rel="preload" as="image" href="assets/frames/mobile/frame_0001.webp?v=2" media="(max-width: 780px)" />
-  <link rel="stylesheet" href="css/style.css?v=12" />
-  <link rel="stylesheet" href="css/premium.css?v=1" />
+  <link rel="preload" as="image" href="/assets/frames/frame_0001.webp?v=2" media="(min-width: 781px)" />
+  <link rel="preload" as="image" href="/assets/frames/mobile/frame_0001.webp?v=2" media="(max-width: 780px)" />
+  <link rel="stylesheet" href="/css/style.css?v=12" />
+  <link rel="stylesheet" href="/css/premium.css?v=1" />
 </head>
 <body>
 
   <!-- ====== LOADER ====== -->
-  <div id="loader" class="loader" aria-hidden="true">
-    <div class="loader__mark brand-mark"><img src="assets/img/logo-light.png" alt="OLV007" /><sup class="brand-mark__tm">™</sup></div>
+  <div id="loader" class="loader is-hidden" aria-hidden="true">
+    <div class="loader__mark brand-mark"><img src="/assets/img/logo-light.png" alt="OLV007" width="500" height="500" /><sup class="brand-mark__tm">™</sup></div>
     <div class="loader__msg" data-fr="Chargement de la séquence">Loading pour sequence</div>
     <div class="loader__bar"><span id="loaderFill"></span></div>
     <div class="loader__pct" id="loaderPct">0%</div>
@@ -40,14 +48,14 @@
 
   <!-- ====== NAV ====== -->
   <header class="nav" id="nav">
-    <a href="#top" class="nav__brand brand-mark" aria-label="OLV007 trademark home"><img src="assets/img/logo-light.png" alt="OLV007" /><sup class="brand-mark__tm" aria-hidden="true">™</sup></a>
+    <a href="#top" class="nav__brand brand-mark" aria-label="OLV007 trademark home"><img src="/assets/img/logo-light.png" alt="OLV007" width="500" height="500" /><sup class="brand-mark__tm" aria-hidden="true">™</sup></a>
     <nav class="nav__links">
       <a href="#dossier" data-fr="Dossier">Dossier</a>
       <a href="#dosage" data-fr="Dosage">Dosage</a>
       <a href="#register" data-fr="Registre">Register</a>
       <a href="#trade" data-fr="Commerce">Trade</a>
       <a href="#notes" data-fr="Notes">Notes</a>
-      <a href="#reels" data-fr="Reels">Reels</a>
+      <a href="#reels" data-fr="Vidéos">Reels</a>
       <a href="#queries" data-fr="Questions">Queries</a>
       <a href="#contact" data-fr="Contact">Contact</a>
     </nav>
@@ -59,7 +67,7 @@
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
         </svg>
       </a>
-      <button class="nav__lang" id="langToggle" type="button" aria-label="Switch language">FR</button>
+      <a class="nav__lang" id="langToggle" href="/fr/" lang="fr-CA" hreflang="fr-CA" aria-label="Passer au français">FR</a>
       <a class="nav__cta" href="https://www.amazon.ca/stores/OLV007Inc/page/A349D5D7-C140-4843-9BE3-05945CE65E5B" target="_blank" rel="noopener"><span class="amazon-flag" aria-hidden="true">🇨🇦</span> Amazon.ca</a>
     </div>
   </header>
@@ -67,7 +75,7 @@
   <!-- ====== ENTRY / SOUNDTRACK ====== -->
   <dialog class="entry" id="entry" aria-labelledby="entryTitle" aria-describedby="entryDescription">
     <div class="entry__content">
-      <img class="entry__logo" src="assets/img/logo-light.png" alt="OLV007" />
+      <img class="entry__logo" src="/assets/img/logo-light.png" alt="OLV007" width="500" height="500" />
       <p class="mono" data-fr="Montréal · Dossier N°007">Montréal · Dossier N°007</p>
       <h2 id="entryTitle" data-fr="À vous de donner le ton.">Set the mood.</h2>
       <p id="entryDescription" data-fr="Un dirty martini. La bonne musique. Entrez comme vous aimez.">A dirty martini. The right soundtrack. Enter your way.</p>
@@ -103,7 +111,7 @@
         <p class="hero__file mono" data-fr="<span class=&quot;tick&quot;></span> Dossier <b>N°007</b> - Saumure d'olive / Montréal"><span class="tick"></span> Dossier <b>N°007</b> - Olive Brine / Montréal</p>
         <div class="hero__mid">
           <h1 class="hero__head" data-fr="Rehaussez votre Dirty Martini avec la saumure d'olive premium <span>OLV</span>">Enhance your Dirty Martini with <span>OLV</span> Premium Olive Brine</h1>
-          <p class="hero__tag hero__slogan">Being Dirty never tasted so clean</p>
+          <p class="hero__tag hero__slogan" data-fr="Être dirty n’a jamais goûté aussi propre">Being Dirty never tasted so clean</p>
           <p class="hero__made"><span data-fr="Faite avec">Made with</span><b data-fr="des olives Kalamata">Kalamata Olives</b></p>
           <p class="hero__claim" data-fr="Le choix n°1 des barmans et mixologues!">Bartenders+Mixologists #1 choice!</p>
           <p class="hero__tag" data-fr="Saumure de Kalamata double-filtrée, conçue pour le dirty martini.">Double-filtered Kalamata brine, built for the dirty martini.</p>
@@ -134,8 +142,8 @@
 
   <!-- ====== AMBIENT LOOP (autoplay · muted · looped) ====== -->
   <section class="filmstrip reveal" aria-label="OLV007 in motion">
-    <video class="filmstrip__video" autoplay muted loop playsinline preload="none" poster="assets/img/poster.jpg" aria-hidden="true">
-      <source src="assets/video/loop.mp4" type="video/mp4" />
+    <video class="filmstrip__video" muted loop playsinline preload="none" poster="/assets/img/poster.jpg" aria-hidden="true">
+      <source data-src="/assets/video/loop.mp4" data-mobile-src="/assets/video/loop-mobile.mp4" type="video/mp4" />
     </video>
   </section>
 
@@ -283,7 +291,7 @@
     <!-- 03 - SPEC -->
     <section class="sec reveal" id="spec">
       <div class="sec-head">
-        <div class="sec-head__row"><span>03 - Spec</span><span class="rule"></span><span data-fr="Pourquoi elle verse mieux">Why it pours better</span></div>
+        <div class="sec-head__row"><span data-fr="03 - Fiche technique">03 - Spec</span><span class="rule"></span><span data-fr="Pourquoi elle verse mieux">Why it pours better</span></div>
         <h2 class="sec-head__title" data-fr="Conçue pour le bar, pas pour le garde-manger.">Built for the rail, not the pantry.</h2>
       </div>
       <ul class="specs">
@@ -332,7 +340,7 @@
           <li class="reg__item">
             <span class="reg__no">N°00</span>
             <span class="reg__city">CAN</span>
-            <span class="reg__logo"><img src="assets/logos/sysco.png" alt="Sysco Canada" /></span>
+            <span class="reg__logo"><img src="/assets/logos/sysco.png" alt="Sysco Canada" width="1774" height="887" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Sysco Canada <svg class="reg__flag" viewBox="0 0 1200 600" aria-hidden="true"><rect width="1200" height="600" fill="#fff"/><rect width="300" height="600" fill="#d52b1e"/><rect x="900" width="300" height="600" fill="#d52b1e"/><path fill="#d52b1e" d="M600 74l-44 82c-5 9-14 8-23 3l-32-16 24 126c5 23-11 23-19 13l-56-62-9 32c-1 4-6 9-12 8l-70-15 18 67c4 15 7 21-4 25l-25 12 121 98c5 4 7 11 5 17l-11 34c42-5 79-12 121-16 4 0 10 6 10 10l-6 124h21l-4-124c0-4 6-10 10-10 42 4 79 11 121 16l-11-34c-2-6 0-13 5-17l121-98-25-12c-11-4-8-10-4-25l18-67-70 15c-6 1-11-4-12-8l-9-32-56 62c-8 10-24 10-19-13l24-126-32 16c-9 5-18 6-23-3z"/></svg></span>
             <span class="reg__meta"><span data-fr="Marque">Brand</span> OLV007 · <strong class="sysco-item"><span data-fr="Article">Item</span> #7502663</strong></span>
           </li>
@@ -347,37 +355,37 @@
           <li class="reg__item reg__item--star">
             <span class="reg__no">N°01</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/69.webp" alt="Arthur's Dinette" /></span>
+            <span class="reg__logo"><img src="/assets/logos/69.webp" alt="Arthur's Dinette" width="600" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name"><span class="reg__star" aria-hidden="true">★</span>Arthur's Dinette</span>
           </li>
           <li class="reg__item reg__item--star">
             <span class="reg__no">N°02</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/70.webp" alt="Pied de Cochon" /></span>
+            <span class="reg__logo"><img src="/assets/logos/70.webp" alt="Pied de Cochon" width="2040" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name"><span class="reg__star" aria-hidden="true">★</span>Pied de Cochon</span>
           </li>
           <li class="reg__item reg__item--star">
             <span class="reg__no">N°03</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/71.webp" alt="Celeste" /></span>
+            <span class="reg__logo"><img src="/assets/logos/71.webp" alt="Celeste" width="722" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name"><span class="reg__star" aria-hidden="true">★</span>Celeste</span>
           </li>
           <li class="reg__item reg__item--star">
             <span class="reg__no">N°04</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/72.webp" alt="Reuben's Deli" /></span>
+            <span class="reg__logo"><img src="/assets/logos/72.webp" alt="Reuben's Deli" width="508" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name"><span class="reg__star" aria-hidden="true">★</span>Reuben's Deli</span>
           </li>
           <li class="reg__item reg__item--star">
             <span class="reg__no">N°05</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/73.webp" alt="Deville Dinerbar" /></span>
+            <span class="reg__logo"><img src="/assets/logos/73.webp" alt="Deville Dinerbar" width="603" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name"><span class="reg__star" aria-hidden="true">★</span>Deville Dinerbar</span>
           </li>
           <li class="reg__item reg__item--star">
             <span class="reg__no">N°06</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/74.webp" alt="Siamo Noi" /></span>
+            <span class="reg__logo"><img src="/assets/logos/74.webp" alt="Siamo Noi" width="1703" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name"><span class="reg__star" aria-hidden="true">★</span>Siamo Noi</span>
           </li>
           <li class="reg__item reg__item--text reg__item--star">
@@ -389,37 +397,37 @@
           <li class="reg__item reg__item--star">
             <span class="reg__no">N°08</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/75.webp" alt="Café Ferreira" /></span>
+            <span class="reg__logo"><img src="/assets/logos/75.webp" alt="Café Ferreira" width="978" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name"><span class="reg__star" aria-hidden="true">★</span>Café Ferreira</span>
           </li>
           <li class="reg__item reg__item--star">
             <span class="reg__no">N°09</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/76.webp" alt="Le Fou Fou" /></span>
+            <span class="reg__logo"><img src="/assets/logos/76.webp" alt="Le Fou Fou" width="723" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name"><span class="reg__star" aria-hidden="true">★</span>Le Fou Fou</span>
           </li>
           <li class="reg__item reg__item--star">
             <span class="reg__no">N°10</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/77.webp" alt="La Parapluie" /></span>
+            <span class="reg__logo"><img src="/assets/logos/77.webp" alt="La Parapluie" width="1046" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name"><span class="reg__star" aria-hidden="true">★</span>La Parapluie</span>
           </li>
           <li class="reg__item reg__item--star">
             <span class="reg__no">N°11</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/78.webp" alt="Mare" /></span>
+            <span class="reg__logo"><img src="/assets/logos/78.webp" alt="Mare" width="1072" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name"><span class="reg__star" aria-hidden="true">★</span>Mare</span>
           </li>
           <li class="reg__item reg__item--star">
             <span class="reg__no">N°12</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/79.webp" alt="La Voûte" /></span>
+            <span class="reg__logo"><img src="/assets/logos/79.webp" alt="La Voûte" width="1031" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name"><span class="reg__star" aria-hidden="true">★</span>La Voûte</span>
           </li>
           <li class="reg__item reg__item--star reg__item--full">
             <span class="reg__no">N°13</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/80.webp" alt="Zante" /></span>
+            <span class="reg__logo"><img src="/assets/logos/80.webp" alt="Zante" width="572" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name"><span class="reg__star" aria-hidden="true">★</span>Zante</span>
           </li>
         </ul>
@@ -428,325 +436,325 @@
           <li class="reg__item">
             <span class="reg__no">N°14</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/37.webp" alt="Estiatorio Milos" /></span>
+            <span class="reg__logo"><img src="/assets/logos/37.webp" alt="Estiatorio Milos" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Estiatorio Milos</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°15</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/1.webp" alt="Palma" /></span>
+            <span class="reg__logo"><img src="/assets/logos/1.webp" alt="Palma" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Palma</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°16</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/2.webp" alt="The Ritz-Carlton" /></span>
+            <span class="reg__logo"><img src="/assets/logos/2.webp" alt="The Ritz-Carlton" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">The Ritz-Carlton</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°17</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/3.webp" alt="Beatrice" /></span>
+            <span class="reg__logo"><img src="/assets/logos/3.webp" alt="Beatrice" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Beatrice</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°18</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/4.webp" alt="Maison Boulud" /></span>
+            <span class="reg__logo"><img src="/assets/logos/4.webp" alt="Maison Boulud" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Maison Boulud</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°19</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/5.webp" alt="Gattomatto" /></span>
+            <span class="reg__logo"><img src="/assets/logos/5.webp" alt="Gattomatto" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Gattomatto</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°20</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/6.webp" alt="Bâton Rouge" /></span>
+            <span class="reg__logo"><img src="/assets/logos/6.webp" alt="Bâton Rouge" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Bâton Rouge</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°21</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/7.webp" alt="Mythos Ouzeri" /></span>
+            <span class="reg__logo"><img src="/assets/logos/7.webp" alt="Mythos Ouzeri" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Mythos Ouzeri</span>
           </li>
           <li class="reg__item reg__item--group">
             <span class="reg__no">N°22</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__group-brand"><img src="assets/logos/jegantic.png" width="320" height="78" alt="Jegantic" /></span>
+            <span class="reg__group-brand"><img src="/assets/logos/jegantic.png" width="320" height="78" alt="Jegantic" loading="lazy" decoding="async" /></span>
             <span class="reg__logo reg__logo--group">
-              <img class="reg__logo--light" src="assets/logos/bambino.png" width="750" height="239" alt="Bambino" />
-              <img class="reg__logo--light" src="assets/logos/yoko-luna.png" width="191" height="195" alt="Yoko Luna" />
-              <img class="reg__logo--light" src="assets/logos/bordelle.png" width="270" height="195" alt="Bord'Elle" />
-              <img src="assets/logos/hang.png" width="161" height="131" alt="Hằng" />
+              <img class="reg__logo--light" src="/assets/logos/bambino.png" width="750" height="239" alt="Bambino" loading="lazy" decoding="async" />
+              <img class="reg__logo--light" src="/assets/logos/yoko-luna.png" width="191" height="195" alt="Yoko Luna" loading="lazy" decoding="async" />
+              <img class="reg__logo--light" src="/assets/logos/bordelle.png" width="270" height="195" alt="Bord'Elle" loading="lazy" decoding="async" />
+              <img src="/assets/logos/hang.png" width="161" height="131" alt="Hằng" loading="lazy" decoding="async" />
             </span>
             <span class="reg__name">Jegantic · Bambino · Yoko Luna · Bord'Elle · Hằng</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°23</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/8.webp" alt="Monza" /></span>
+            <span class="reg__logo"><img src="/assets/logos/8.webp" alt="Monza" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Monza</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°24</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/10.webp" alt="Houston" /></span>
+            <span class="reg__logo"><img src="/assets/logos/10.webp" alt="Houston" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Houston</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°25</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/11.webp" alt="Moe's" /></span>
+            <span class="reg__logo"><img src="/assets/logos/11.webp" alt="Moe's" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Moe's</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°26</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/12.webp" alt="La Belle &amp; La Bœuf" /></span>
+            <span class="reg__logo"><img src="/assets/logos/12.webp" alt="La Belle &amp; La Bœuf" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">La Belle &amp; La Bœuf</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°27</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/14.webp" alt="40 Westt" /></span>
+            <span class="reg__logo"><img src="/assets/logos/14.webp" alt="40 Westt" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">40 Westt</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°28</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/15.webp" alt="New City Gas" /></span>
+            <span class="reg__logo"><img src="/assets/logos/15.webp" alt="New City Gas" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">New City Gas</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°29</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/16.webp" alt="Towne380" /></span>
+            <span class="reg__logo"><img src="/assets/logos/16.webp" alt="Towne380" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Towne380</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°30</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/17.webp" alt="Bœuf &amp; Cochon" /></span>
+            <span class="reg__logo"><img src="/assets/logos/17.webp" alt="Bœuf &amp; Cochon" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Bœuf &amp; Cochon</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°31</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/18.webp" alt="Stillife" /></span>
+            <span class="reg__logo"><img src="/assets/logos/18.webp" alt="Stillife" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Stillife</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°32</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/19.webp" alt="Mirela's" /></span>
+            <span class="reg__logo"><img src="/assets/logos/19.webp" alt="Mirela's" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Mirela's</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°33</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/20.webp" alt="Annies sur le lac" /></span>
+            <span class="reg__logo"><img src="/assets/logos/20.webp" alt="Annies sur le lac" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Annies sur le lac</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°34</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/21.webp" alt="Stellina" /></span>
+            <span class="reg__logo"><img src="/assets/logos/21.webp" alt="Stellina" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Stellina</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°35</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/22.webp" alt="Philinas" /></span>
+            <span class="reg__logo"><img src="/assets/logos/22.webp" alt="Philinas" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Philinas</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°36</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/23.webp" alt="Majesthé" /></span>
+            <span class="reg__logo"><img src="/assets/logos/23.webp" alt="Majesthé" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Majesthé</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°37</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/24.webp" alt="Hidden Fish" /></span>
+            <span class="reg__logo"><img src="/assets/logos/24.webp" alt="Hidden Fish" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Hidden Fish</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°38</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/25.webp" alt="Double's" /></span>
+            <span class="reg__logo"><img src="/assets/logos/25.webp" alt="Double's" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Double's</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°39</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/26.webp" alt="Osteria MKT" /></span>
+            <span class="reg__logo"><img src="/assets/logos/26.webp" alt="Osteria MKT" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Osteria MKT</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°40</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/27.webp" alt="Split Tree Cocktail Co" /></span>
+            <span class="reg__logo"><img src="/assets/logos/27.webp" alt="Split Tree Cocktail Co" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Split Tree Cocktail Co</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°41</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/29.webp" alt="Rib N' Reef" /></span>
+            <span class="reg__logo"><img src="/assets/logos/29.webp" alt="Rib N' Reef" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Rib N' Reef</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°42</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/30.webp" alt="Taverne" /></span>
+            <span class="reg__logo"><img src="/assets/logos/30.webp" alt="Taverne" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Taverne</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°43</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/31.webp" alt="Sergiolino" /></span>
+            <span class="reg__logo"><img src="/assets/logos/31.webp" alt="Sergiolino" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Sergiolino</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°44</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/32.webp" alt="Santos Bar + Tapas" /></span>
+            <span class="reg__logo"><img src="/assets/logos/32.webp" alt="Santos Bar + Tapas" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Santos Bar + Tapas</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°45</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/33.webp" alt="RossoCielo" /></span>
+            <span class="reg__logo"><img src="/assets/logos/33.webp" alt="RossoCielo" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">RossoCielo</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°46</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/34.webp" alt="Playground" /></span>
+            <span class="reg__logo"><img src="/assets/logos/34.webp" alt="Playground" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Playground</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°47</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/35.webp" alt="Olive &amp; Olives" /></span>
+            <span class="reg__logo"><img src="/assets/logos/35.webp" alt="Olive &amp; Olives" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Olive &amp; Olives</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°48</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/36.webp" alt="Notre-Bœuf-de-Grâce" /></span>
+            <span class="reg__logo"><img src="/assets/logos/36.webp" alt="Notre-Bœuf-de-Grâce" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Notre-Bœuf-de-Grâce</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°49</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/39.webp" alt="Impasto" /></span>
+            <span class="reg__logo"><img src="/assets/logos/39.webp" alt="Impasto" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Impasto</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°50</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/40.webp" alt="Hayat" /></span>
+            <span class="reg__logo"><img src="/assets/logos/40.webp" alt="Hayat" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Hayat</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°51</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/41.webp" alt="Hiatus" /></span>
+            <span class="reg__logo"><img src="/assets/logos/41.webp" alt="Hiatus" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Hiatus</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°52</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/42.webp" alt="Estelle" /></span>
+            <span class="reg__logo"><img src="/assets/logos/42.webp" alt="Estelle" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Estelle</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°53</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/43.webp" alt="Carla" /></span>
+            <span class="reg__logo"><img src="/assets/logos/43.webp" alt="Carla" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Carla</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°54</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/44.webp" alt="Ryú" /></span>
+            <span class="reg__logo"><img src="/assets/logos/44.webp" alt="Ryú" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Ryú</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°55</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/45.webp" alt="Robbie's Smokehouse &amp; Burger Bar" /></span>
+            <span class="reg__logo"><img src="/assets/logos/45.webp" alt="Robbie's Smokehouse &amp; Burger Bar" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Robbie's Smokehouse &amp; Burger Bar</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°56</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/46.webp" alt="Pigeon" /></span>
+            <span class="reg__logo"><img src="/assets/logos/46.webp" alt="Pigeon" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Pigeon</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°57</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/47.webp" alt="Maü" /></span>
+            <span class="reg__logo"><img src="/assets/logos/47.webp" alt="Maü" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Maü</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°58</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/48.webp" alt="Le Violon" /></span>
+            <span class="reg__logo"><img src="/assets/logos/48.webp" alt="Le Violon" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Le Violon</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°59</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/49.webp" alt="Greasy Spoon" /></span>
+            <span class="reg__logo"><img src="/assets/logos/49.webp" alt="Greasy Spoon" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Greasy Spoon</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°60</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/50.webp" alt="Bernies" /></span>
+            <span class="reg__logo"><img src="/assets/logos/50.webp" alt="Bernies" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Bernies</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°61</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/51.webp" alt="La Buvette du Quartier" /></span>
+            <span class="reg__logo"><img src="/assets/logos/51.webp" alt="La Buvette du Quartier" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">La Buvette du Quartier</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°62</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/52.webp" alt="Dirty Tacos" /></span>
+            <span class="reg__logo"><img src="/assets/logos/52.webp" alt="Dirty Tacos" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Dirty Tacos</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°63</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/53.webp" alt="Romies" /></span>
+            <span class="reg__logo"><img src="/assets/logos/53.webp" alt="Romies" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Romies</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°64</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/54.webp" alt="Vinum" /></span>
+            <span class="reg__logo"><img src="/assets/logos/54.webp" alt="Vinum" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Vinum</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°65</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/81.webp" alt="Amalia" /></span>
+            <span class="reg__logo"><img src="/assets/logos/81.webp" alt="Amalia" width="919" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Amalia</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°66</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/82.webp" alt="Buvette Nicole" /></span>
+            <span class="reg__logo"><img src="/assets/logos/82.webp" alt="Buvette Nicole" width="886" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Buvette Nicole</span>
           </li>
           <li class="reg__item reg__item--text">
@@ -758,103 +766,103 @@
           <li class="reg__item">
             <span class="reg__no">N°68</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/83.webp" alt="Mignon Restaurant" /></span>
+            <span class="reg__logo"><img src="/assets/logos/83.webp" alt="Mignon Restaurant" width="717" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Mignon Restaurant</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°69</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/84.webp" alt="Can Am Distribution" /></span>
+            <span class="reg__logo"><img src="/assets/logos/84.webp" alt="Can Am Distribution" width="609" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Can Am Distribution</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°70</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/85.webp" alt="Estiatorio Marmo" /></span>
+            <span class="reg__logo"><img src="/assets/logos/85.webp" alt="Estiatorio Marmo" width="617" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Estiatorio Marmo</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°71</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/86.webp" alt="Satay Brothers" /></span>
+            <span class="reg__logo"><img src="/assets/logos/86.webp" alt="Satay Brothers" width="912" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Satay Brothers</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°72</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/87.webp" alt="Sel Noir" /></span>
+            <span class="reg__logo"><img src="/assets/logos/87.webp" alt="Sel Noir" width="1511" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Sel Noir</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°73</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/88.webp" alt="Prezze Mollo" /></span>
+            <span class="reg__logo"><img src="/assets/logos/88.webp" alt="Prezze Mollo" width="863" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Prezze Mollo</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°74</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/89.webp" alt="Fiorellino Centre-Ville" /></span>
+            <span class="reg__logo"><img src="/assets/logos/89.webp" alt="Fiorellino Centre-Ville" width="234" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Fiorellino Centre-Ville</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°75</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/90.webp" alt="Tiramisu" /></span>
+            <span class="reg__logo"><img src="/assets/logos/90.webp" alt="Tiramisu" width="1826" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Tiramisu</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°76</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/91.webp" alt="Château Royal Reception Hall" /></span>
+            <span class="reg__logo"><img src="/assets/logos/91.webp" alt="Château Royal Reception Hall" width="321" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Château Royal Reception Hall</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°77</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/36.webp" alt="NBG — All Locations" /></span>
+            <span class="reg__logo"><img src="/assets/logos/36.webp" alt="NBG — All Locations" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">NBG — All Locations</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°78</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/92.webp" alt="Orexi" /></span>
+            <span class="reg__logo"><img src="/assets/logos/92.webp" alt="Orexi" width="535" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Orexi</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°79</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/93.webp" alt="Park Sushi" /></span>
+            <span class="reg__logo"><img src="/assets/logos/93.webp" alt="Park Sushi" width="980" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Park Sushi</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°80</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img src="assets/logos/94.webp" alt="Yubari" /></span>
+            <span class="reg__logo"><img src="/assets/logos/94.webp" alt="Yubari" width="1594" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Yubari</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°81</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><a href="https://www.cocktailemporium.com/products/olv-olive-brine" target="_blank" rel="noopener"><img src="assets/logos/95.webp" alt="Cocktail Emporium" /></a></span>
+            <span class="reg__logo"><a href="https://www.cocktailemporium.com/products/olv-olive-brine" target="_blank" rel="noopener"><img src="/assets/logos/95.webp" alt="Cocktail Emporium" width="625" height="300" loading="lazy" decoding="async" /></a></span>
             <span class="reg__name">Cocktail Emporium</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°82</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img class="reg__logo--light" src="assets/logos/avli.png" width="2556" height="1561" alt="Estiatorio Avli" loading="lazy" /></span>
+            <span class="reg__logo"><img class="reg__logo--light" src="/assets/logos/avli.png" width="2556" height="1561" alt="Estiatorio Avli" loading="lazy" /></span>
             <span class="reg__name">Estiatorio Avli · Marché Central</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°83</span>
             <span class="reg__city">MTL</span>
-            <span class="reg__logo"><img class="reg__logo--light" src="assets/logos/burger-bar-crescent.png" width="1200" height="1200" alt="Burger Bar Crescent" loading="lazy" /></span>
+            <span class="reg__logo"><img class="reg__logo--light" src="/assets/logos/burger-bar-crescent.png" width="1200" height="1200" alt="Burger Bar Crescent" loading="lazy" /></span>
             <span class="reg__name">Burger Bar Crescent</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°84</span>
             <span class="reg__city">LAVAL</span>
-            <span class="reg__logo"><img src="assets/logos/louisinana.gif" width="1208" height="1230" alt="LouisiNANA" loading="lazy" /></span>
+            <span class="reg__logo"><img src="/assets/logos/louisinana.gif" width="1208" height="1230" alt="LouisiNANA" loading="lazy" /></span>
             <span class="reg__name">LouisiNANA · Centropolis Laval</span>
           </li>
         </ul>
@@ -866,121 +874,121 @@
           <li class="reg__item reg__item--full reg__item--feature">
             <span class="reg__no">N°01</span>
             <span class="reg__city">GTA</span>
-            <span class="reg__logo"><a href="https://kafsupplies.com/" target="_blank" rel="noopener"><img src="assets/logos/96.webp" alt="KAF" /></a></span>
+            <span class="reg__logo"><a href="https://kafsupplies.com/" target="_blank" rel="noopener"><img src="/assets/logos/96.webp" alt="KAF" width="852" height="300" loading="lazy" decoding="async" /></a></span>
             <span class="reg__name"><a class="reg__link" href="https://kafsupplies.com/" target="_blank" rel="noopener">KAF</a> — restaurant and bar distribution for the GTA</span>
           </li>
           <li class="reg__item reg__item--full reg__item--feature">
             <span class="reg__no">N°02</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/37a.webp" alt="Estiatorio Milos" /></span>
+            <span class="reg__logo"><img src="/assets/logos/37a.webp" alt="Estiatorio Milos" width="250" height="125" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Estiatorio Milos</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°03</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/55.webp" alt="Aera" /></span>
+            <span class="reg__logo"><img src="/assets/logos/55.webp" alt="Aera" width="1299" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Aera</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°04</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/56.webp" alt="Apt 200" /></span>
+            <span class="reg__logo"><img src="/assets/logos/56.webp" alt="Apt 200" width="1835" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Apt 200</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°05</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/57.webp" alt="Bar Koukla" /></span>
+            <span class="reg__logo"><img src="/assets/logos/57.webp" alt="Bar Koukla" width="569" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Bar Koukla</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°06</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/58.webp" alt="Mamakas Taverna" /></span>
+            <span class="reg__logo"><img src="/assets/logos/58.webp" alt="Mamakas Taverna" width="1327" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Mamakas Taverna</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°07</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/59.webp" alt="Bisha Hotel · Kost / Mister C" /></span>
+            <span class="reg__logo"><img src="/assets/logos/59.webp" alt="Bisha Hotel · Kost / Mister C" width="837" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Bisha Hotel · Kost / Mister C</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°08</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/60.webp" alt="Black &amp; Blue Steakhouse" /></span>
+            <span class="reg__logo"><img src="/assets/logos/60.webp" alt="Black &amp; Blue Steakhouse" width="362" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Black &amp; Blue Steakhouse</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°09</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/61.webp" alt="Buvette Resto" /></span>
+            <span class="reg__logo"><img src="/assets/logos/61.webp" alt="Buvette Resto" width="960" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Buvette Resto</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°10</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/62.webp" alt="DiMario Trattoria" /></span>
+            <span class="reg__logo"><img src="/assets/logos/62.webp" alt="DiMario Trattoria" width="1149" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">DiMario Trattoria</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°11</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/63.webp" alt="Kasa Moto" /></span>
+            <span class="reg__logo"><img src="/assets/logos/63.webp" alt="Kasa Moto" width="662" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Kasa Moto</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°12</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/64.webp" alt="Mademoiselle" /></span>
+            <span class="reg__logo"><img src="/assets/logos/64.webp" alt="Mademoiselle" width="986" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Mademoiselle</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°13</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/65.webp" alt="Omni King Edward Hotel" /></span>
+            <span class="reg__logo"><img src="/assets/logos/65.webp" alt="Omni King Edward Hotel" width="1752" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Omni King Edward Hotel</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°14</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/66.webp" alt="Portland Square · Primadonna" /></span>
+            <span class="reg__logo"><img src="/assets/logos/66.webp" alt="Portland Square · Primadonna" width="538" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Portland Square · Primadonna</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°15</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/67.webp" alt="Sofia" /></span>
+            <span class="reg__logo"><img src="/assets/logos/67.webp" alt="Sofia" width="456" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Sofia</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°16</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/68.webp" alt="Via Allegro" /></span>
+            <span class="reg__logo"><img src="/assets/logos/68.webp" alt="Via Allegro" width="322" height="300" loading="lazy" decoding="async" /></span>
             <span class="reg__name">Via Allegro</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°17</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/queens-harbour.png" width="117" height="100" alt="Queens Harbour" loading="lazy" /></span>
+            <span class="reg__logo"><img src="/assets/logos/queens-harbour.png" width="117" height="100" alt="Queens Harbour" loading="lazy" /></span>
             <span class="reg__name">Queens Harbour</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°18</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img class="reg__logo--light" src="assets/logos/agora.png" width="260" height="105" alt="Agora" loading="lazy" /></span>
+            <span class="reg__logo"><img class="reg__logo--light" src="/assets/logos/agora.png" width="260" height="105" alt="Agora" loading="lazy" /></span>
             <span class="reg__name">Agora</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°19</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/trapezi.png" width="1152" height="587" alt="Trapezi" loading="lazy" /></span>
+            <span class="reg__logo"><img src="/assets/logos/trapezi.png" width="1152" height="587" alt="Trapezi" loading="lazy" /></span>
             <span class="reg__name" data-fr="Trapezi · Salle à manger privée">Trapezi · Private Dining</span>
           </li>
           <li class="reg__item">
             <span class="reg__no">N°20</span>
             <span class="reg__city">YYZ</span>
-            <span class="reg__logo"><img src="assets/logos/58.webp" width="1327" height="300" alt="Mamakas Summerhill" loading="lazy" /></span>
+            <span class="reg__logo"><img src="/assets/logos/58.webp" width="1327" height="300" alt="Mamakas Summerhill" loading="lazy" /></span>
             <span class="reg__name" data-fr="Mamakas Summerhill · À venir">Mamakas Summerhill · Coming Soon</span>
           </li>
         </ul>
@@ -1014,7 +1022,7 @@
             <li data-fr="Salinité équilibrée (jamais agressive ni trouble)">Balanced salinity (never harsh or cloudy)</li>
             <li data-fr="Conçue pour les Dirty et Extra Dirty Martinis">Designed specifically for Dirty &amp; Extra Dirty Martinis</li>
             <li data-fr="Format professionnel 750 ml prêt pour le bar">Professional 750 ml bar-ready format</li>
-            <li data-fr="Environ 80 à 100 Dirty Martinis par bouteille">Approx. 80–100 Dirty Martinis per bottle</li>
+            <li data-fr="75 à 100 martinis par bouteille de 750 ml">75–100 martinis per 750 ml</li>
           </ul>
         </div>
       </div>
@@ -1042,28 +1050,28 @@
       </div>
       <div class="notes">
         <blockquote class="note-card">
-          <p class="note-card__q">“Once in a while, a product comes and pushes us to redefine a category. This is the case with OLV. We need to start rethinking the place of olive brine in the cocktail world.”</p>
-          <cite><b>Lawrence Picard</b><span>Founder-Owner</span><span>Nectar Mixologie</span></cite>
+          <p class="note-card__q" data-fr="« De temps à autre, un produit nous pousse à redéfinir une catégorie. C’est le cas d’OLV. Nous devons commencer à repenser la place de la saumure d’olive dans l’univers du cocktail. »">“Once in a while, a product comes and pushes us to redefine a category. This is the case with OLV. We need to start rethinking the place of olive brine in the cocktail world.”</p>
+          <cite><b>Lawrence Picard</b><span data-fr="Fondateur-propriétaire">Founder-Owner</span><span>Nectar Mixologie</span></cite>
         </blockquote>
         <blockquote class="note-card">
-          <p class="note-card__q">“OLV olive brine brings a depth and balance that elevates the taste of our martinis to a higher level. Come taste for yourself and see why it has become the favorite ingredient of our customers and team. We are confident that, just like us, you will fall in love with this product.”</p>
-          <cite><b>David Goirand</b><span>Beverage Director / Head Sommelier</span><span>Ritz-Carlton Montreal</span></cite>
+          <p class="note-card__q" data-fr="« La saumure d’olive OLV apporte une profondeur et un équilibre qui rehaussent le goût de nos martinis. Venez goûter par vous-même et découvrir pourquoi elle est devenue l’ingrédient favori de nos clients et de notre équipe. Nous sommes convaincus que, comme nous, vous tomberez sous le charme de ce produit. »">“OLV olive brine brings a depth and balance that elevates the taste of our martinis to a higher level. Come taste for yourself and see why it has become the favorite ingredient of our customers and team. We are confident that, just like us, you will fall in love with this product.”</p>
+          <cite><b>David Goirand</b><span data-fr="Directeur des boissons / Chef sommelier">Beverage Director / Head Sommelier</span><span>Ritz-Carlton Montreal</span></cite>
         </blockquote>
         <blockquote class="note-card">
-          <p class="note-card__q">“Since we started using OLV's olive brine for our dirty martinis, our sales have significantly increased. It's 100% pure olive juice, without any olive pieces. The Martinis are perfect now.”</p>
+          <p class="note-card__q" data-fr="« Depuis que nous utilisons la saumure d’olive OLV pour nos dirty martinis, nos ventes ont considérablement augmenté. C’est du jus d’olive pur à 100 %, sans morceaux d’olive. Les martinis sont maintenant parfaits. »">“Since we started using OLV's olive brine for our dirty martinis, our sales have significantly increased. It's 100% pure olive juice, without any olive pieces. The Martinis are perfect now.”</p>
           <cite><b>Patrik Schmidt</b><span>Sommelier &amp; Gérant</span><span>Ribnreef Steakhouse &amp; Salon de Cigars</span></cite>
         </blockquote>
         <blockquote class="note-card">
-          <p class="note-card__q">“Been in the restaurant industry since 1991 and products come and go, occasionally you start working with some that you know will be with you for a lifetime. The minute I tried OLV I knew this was one of them.”</p>
-          <cite><b>Massimo Lecas</b><span>Co-Owner</span><span>Novantuno Restaurants</span></cite>
+          <p class="note-card__q" data-fr="« Je travaille dans la restauration depuis 1991. Les produits vont et viennent, mais il arrive qu’on en découvre un qu’on sait vouloir garder toute sa vie. Dès que j’ai goûté OLV, j’ai su que c’était l’un d’eux. »">“Been in the restaurant industry since 1991 and products come and go, occasionally you start working with some that you know will be with you for a lifetime. The minute I tried OLV I knew this was one of them.”</p>
+          <cite><b>Massimo Lecas</b><span data-fr="Copropriétaire">Co-Owner</span><span>Novantuno Restaurants</span></cite>
         </blockquote>
         <blockquote class="note-card">
-          <p class="note-card__q">“Having worked in the hospitality industry for 25 years, as well as dirty martini enthusiast, I can honestly say that this is the best olive brine that I have ever seen on the market! Furthermore, their customer service is second to none. A must have for any bar!”</p>
-          <cite><b>Justin Sabini</b><span>General Manager</span><span>Yoko Luna</span></cite>
+          <p class="note-card__q" data-fr="« Après 25 ans dans l’hôtellerie-restauration, et en tant qu’amateur de dirty martinis, je peux honnêtement dire que c’est la meilleure saumure d’olive que j’ai vue sur le marché ! De plus, leur service à la clientèle est incomparable. Un incontournable pour tout bar ! »">“Having worked in the hospitality industry for 25 years, as well as dirty martini enthusiast, I can honestly say that this is the best olive brine that I have ever seen on the market! Furthermore, their customer service is second to none. A must have for any bar!”</p>
+          <cite><b>Justin Sabini</b><span data-fr="Directeur général">General Manager</span><span>Yoko Luna</span></cite>
         </blockquote>
         <blockquote class="note-card">
-          <p class="note-card__q">“We've been absolutely blown away by the incredible taste of OLV olive juice in our dirty martinis! Both our staff and clients can't get enough of it. Not only does it elevate the flavor profile, but it's also incredibly easy to use. The quality is top-notch, and it's made crafting cocktails a breeze. We can't recommend it enough!!”</p>
-          <cite><b>Fabio Broccoli</b><span>Director of Marketing</span><span>PALMA* Griffintown</span></cite>
+          <p class="note-card__q" data-fr="« Le goût incroyable du jus d’olive OLV dans nos dirty martinis nous a complètement conquis ! Notre équipe comme nos clients en redemandent. Il rehausse les saveurs et il est très facile à utiliser. La qualité est exceptionnelle et préparer des cocktails est devenu un jeu d’enfant. Nous le recommandons sans réserve ! »">“We've been absolutely blown away by the incredible taste of OLV olive juice in our dirty martinis! Both our staff and clients can't get enough of it. Not only does it elevate the flavor profile, but it's also incredibly easy to use. The quality is top-notch, and it's made crafting cocktails a breeze. We can't recommend it enough!!”</p>
+          <cite><b>Fabio Broccoli</b><span data-fr="Directeur marketing">Director of Marketing</span><span>PALMA* Griffintown</span></cite>
         </blockquote>
       </div>
     </section>
@@ -1071,7 +1079,7 @@
     <!-- 07 - REELS -->
     <section class="sec reveal" id="reels">
       <div class="sec-head">
-        <div class="sec-head__row"><span>07 - Reels</span><span class="rule"></span><span><a href="https://instagram.com/olv007_" target="_blank" rel="noopener">@olv007_</a></span></div>
+        <div class="sec-head__row"><span data-fr="07 - Vidéos">07 - Reels</span><span class="rule"></span><span><a href="https://instagram.com/olv007_" target="_blank" rel="noopener">@olv007_</a></span></div>
         <h2 class="sec-head__title" data-fr="Directement de la grille.">Straight from the grid.</h2>
       </div>
       <!--
@@ -1104,7 +1112,7 @@
         </details>
         <details>
           <summary data-fr="Quelles sont vos heures de bureau?">What are your office hours?</summary>
-          <p>9am - 6pm EST</p>
+          <p data-fr="9 h à 18 h (heure de l’Est)">9am - 6pm EST</p>
         </details>
         <details>
           <summary data-fr="Quelle est la durée de conservation d'OLV?">What is the shelf life of OLV?</summary>
@@ -1120,7 +1128,7 @@
         </details>
         <details>
           <summary data-fr="Qui est le contact presse d'OLV?">Who is the press contact for OLV?</summary>
-          <p>Peter Gianopoulos Founder <a href="tel:+15142403225">+1 514.240.3225</a> <a href="mailto:peter@olv007.com">peter@olv007.com</a></p>
+          <p>Peter Gianopoulos <span data-fr="Fondateur">Founder</span> <a href="tel:+15142403225">+1 514.240.3225</a> <a href="mailto:peter@olv007.com">peter@olv007.com</a></p>
         </details>
         <details>
           <summary data-fr="Pourquoi mon bar préféré ou mon magasin d'alcool local ne vend-il pas OLV?">Why doesn't my favorite bar or local liquor store carry OLV?</summary>
@@ -1150,11 +1158,11 @@
       <dl class="contact">
         <dt data-fr="Adresse">Address</dt><dd>Montréal, Québec, Canada</dd>
         <dt data-fr="Téléphone">Phone</dt><dd><a href="tel:+15142403225">(514) 240-3225</a></dd>
-        <dt>Email</dt><dd><a href="mailto:info@olv007.com">info@olv007.com</a></dd>
-        <dt data-fr="Heures de bureau">Office hours</dt><dd>9am - 6pm EST</dd>
-        <dt data-fr="Contact presse">Press contact</dt><dd>Peter Gianopoulos, Founder · <a href="tel:+15142403225">+1 514.240.3225</a> · <a href="mailto:peter@olv007.com">peter@olv007.com</a></dd>
+        <dt data-fr="Courriel">Email</dt><dd><a href="mailto:info@olv007.com">info@olv007.com</a></dd>
+        <dt data-fr="Heures de bureau">Office hours</dt><dd data-fr="9 h à 18 h (heure de l’Est)">9am - 6pm EST</dd>
+        <dt data-fr="Contact presse">Press contact</dt><dd>Peter Gianopoulos, <span data-fr="Fondateur">Founder</span> · <a href="tel:+15142403225">+1 514.240.3225</a> · <a href="mailto:peter@olv007.com">peter@olv007.com</a></dd>
         <dt data-fr="Réseaux">Social</dt><dd><a href="https://instagram.com/olv007_" target="_blank" rel="noopener">@olv007_</a></dd>
-        <dt>Est.</dt><dd>2023</dd>
+        <dt data-fr="Fondée en">Est.</dt><dd>2023</dd>
       </dl>
     </section>
 
@@ -1162,10 +1170,10 @@
 
   <footer class="footer">
     <div class="footer__inner">
-      <div class="footer__mark brand-mark"><img src="assets/img/logo-light.png" alt="OLV007" /><sup class="brand-mark__tm">™</sup></div>
-      <div class="footer__meta" data-fr="Saumure d'olive premium<br/>Montréal, Québec · Est. 2023<br/>Veuillez consommer de façon responsable">
+      <div class="footer__mark brand-mark"><img src="/assets/img/logo-light.png" alt="OLV007" width="500" height="500" /><sup class="brand-mark__tm">™</sup></div>
+      <div class="footer__meta" data-fr="Saumure d'olive premium<br/>Fabriquée à Kalamata, en Grèce · Marque montréalaise depuis 2023<br/>Veuillez consommer de façon responsable">
         Premium Olive Brine<br/>
-        Montréal, Québec · Est. 2023<br/>
+        Made in Kalamata, Greece · Montréal brand since 2023<br/>
         Please enjoy responsibly
       </div>
     </div>
@@ -1173,9 +1181,9 @@
     <p class="footer__small">© <span id="year"></span> OLV007™ - Dossier N°007</p>
   </footer>
 
-  <script src="js/main.js?v=6"></script>
-  <script src="js/ambient.js?v=7"></script>
-  <script src="js/premium.js?v=1"></script>
+  <script src="/js/main.js?v=7"></script>
+  <script src="/js/ambient.js?v=8"></script>
+  <script src="/js/premium.js?v=1"></script>
 
   <!-- ====== INSTAGRAM REELS WALL ("06 - Reels") ======
        Paste the full URL of each reel you want shown, e.g.:
@@ -1199,8 +1207,9 @@
 
       if (!REELS.length) {
         grid.innerHTML =
-          '<p class="reels__empty">Reels coming soon. ' +
-          'Catch them on <a href="https://instagram.com/olv007_" target="_blank" rel="noopener">@olv007_</a>.</p>';
+          '<p class="reels__empty">' +
+          (document.documentElement.lang.startsWith("fr") ? 'Vidéos à venir. Retrouvez-les sur ' : 'Reels coming soon. Catch them on ') +
+          '<a href="https://instagram.com/olv007_" target="_blank" rel="noopener">@olv007_</a>.</p>';
         return;
       }
 
@@ -1212,13 +1221,24 @@
         grid.appendChild(bq);
       });
 
-      var s = document.createElement("script");
-      s.async = true;
-      s.src = "https://www.instagram.com/embed.js";
-      s.onload = function () {
-        if (window.instgrm) window.instgrm.Embeds.process();
-      };
-      document.body.appendChild(s);
+      function loadReels() {
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.instagram.com/embed.js";
+        s.onload = function () {
+          if (window.instgrm) window.instgrm.Embeds.process();
+        };
+        document.body.appendChild(s);
+      }
+      if ("IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          if (entries.some(function (entry) { return entry.isIntersecting; })) {
+            observer.disconnect();
+            loadReels();
+          }
+        }, { rootMargin: "600px" });
+        observer.observe(grid);
+      } else { loadReels(); }
     })();
   </script>
 </body>
