@@ -1,0 +1,182 @@
+/* Visual enhancement layer. Existing content, identity and footer are retained.
+   Preserve layout / motion 4 / existing density. Native CSS, no 3D runtime. */
+:root {
+  --surface: #fff;
+  --surface-low: #f3f5f1;
+  --surface-edge: #dce2d8;
+  --surface-highlight: rgb(255 255 255 / .92);
+  --depth-tight: 0 2px 4px rgb(27 44 21 / .06);
+  --depth-ambient: 0 18px 48px -24px rgb(27 44 21 / .26);
+  --glass: rgb(12 18 10 / .85);
+  --glass-edge: rgb(255 255 255 / .18);
+  --light-text: #f6f8f3;
+  --light-muted: #bac4b5;
+  --accent-readable: #246d1c;
+  --button-top: #65ca35;
+  --button-bottom: #4cbb17;
+  --button-ink: #102009;
+  --button-lip: #2a7114;
+  --focus: #246d1c;
+  --radius-panel: 16px;
+  --radius-control: 8px;
+  --glare: rgb(255 255 255 / .24);
+  --scene-shadow: rgb(0 0 0 / .4);
+}
+
+/* Keep cinematic areas and original footer colours independent of paper theme. */
+.dossier {
+  --olive: var(--accent-readable);
+  --olive-soft: var(--accent-readable);
+  --stamp: var(--accent-readable);
+  background: linear-gradient(120deg, var(--surface-low), var(--surface) 38%, var(--surface-low));
+  border-top: 1px solid var(--surface-highlight);
+  box-shadow: 0 -24px 80px var(--scene-shadow);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #171d15;
+    --surface-low: #10160f;
+    --surface-edge: #354130;
+    --surface-highlight: rgb(255 255 255 / .09);
+    --depth-tight: 0 2px 5px rgb(0 0 0 / .2);
+    --depth-ambient: 0 24px 54px -22px rgb(0 0 0 / .55);
+    --accent-readable: #8bdb63;
+    --focus: #8bdb63;
+    --glare: rgb(255 255 255 / .065);
+  }
+  .dossier {
+    color-scheme: dark;
+    --ink: #edf2e9;
+    --brine: var(--surface);
+    --brine-2: var(--surface-low);
+    --muted: #b4bfad;
+    --line: var(--surface-edge);
+  }
+  .dossier .press-card__badge { color: var(--button-ink); }
+  .dossier .press-card:hover .press-card__badge { color: var(--light-text); }
+  .dossier .register { --ink: #111; --olive-soft: #8bdb63; }
+}
+
+/* Light falls from above; elevation is reserved for existing discrete panels. */
+.store, .dose__card, .note-card, .trade-offer, .press-card {
+  position: relative;
+  border: 1px solid var(--surface-edge);
+  border-radius: var(--radius-panel);
+  background: linear-gradient(155deg, var(--surface), var(--surface-low));
+  box-shadow: inset 0 1px 0 var(--surface-highlight), var(--depth-tight), var(--depth-ambient);
+}
+.store--amazon {
+  border-color: var(--olive);
+  box-shadow: inset 0 3px 0 var(--olive), inset 0 4px 0 var(--surface-highlight), var(--depth-tight), var(--depth-ambient);
+}
+.store--local { border-radius: var(--radius-control); }
+.dose__amt { letter-spacing: -.055em; text-shadow: 0 2px 0 var(--surface-highlight); }
+.dose__tag { color: var(--olive); }
+.trade-cols, .specs { border-color: var(--surface-edge); border-radius: var(--radius-panel); overflow: hidden; box-shadow: var(--depth-tight), var(--depth-ambient); }
+.trade-col, .specs li { background: linear-gradient(150deg, var(--surface), var(--surface-low)); }
+.trade-offer { border-left: 3px solid var(--olive); }
+.press-card { border-left: 4px solid var(--olive); }
+.press-card:hover { background: var(--surface-low); border-color: var(--olive); }
+.press-card:hover .press-card__title { color: var(--ink); }
+.press-card:hover .press-card__cta { color: var(--olive); }
+.register { --olive-soft: #8bdb63; gap: 8px; border: 0; background: transparent; }
+.reg__item { border: 1px solid var(--glass-edge); border-radius: var(--radius-control); background: linear-gradient(145deg, #1d2419, #10130e); box-shadow: inset 0 1px 0 var(--surface-highlight), var(--depth-tight); }
+.reg__item--star { background: linear-gradient(145deg, #24381a, #111b0d); box-shadow: inset 3px 0 0 #4cbb17, inset 0 1px 0 var(--glass-edge); }
+.reg__city { color: var(--light-muted); }
+.sec-head__title { line-height: 1.08; letter-spacing: -.035em; text-wrap: balance; }
+
+/* Tactile primary, outlined secondary, and translucent ghost controls. */
+.btn, .nav__cta {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; border-radius: var(--radius-control);
+  line-height: 1.5; text-align: center;
+  transition: transform 240ms ease-out;
+}
+.btn--stamp, .btn--stamp:hover {
+  background: linear-gradient(180deg, var(--button-top), var(--button-bottom));
+  color: var(--button-ink); border-color: var(--button-bottom);
+  box-shadow: inset 0 1px 0 var(--surface-highlight), 0 3px 0 var(--button-lip), 0 9px 22px -10px var(--button-lip);
+  font-weight: 600;
+}
+.btn--ghost { background: var(--surface); border-color: var(--surface-edge); color: var(--ink); box-shadow: inset 0 1px 0 var(--surface-highlight), var(--depth-tight); }
+.btn--ghost:hover { background: var(--surface-low); color: var(--ink); border-color: var(--olive); }
+.btn--ghost-light, .nav__cta { background: var(--glass); border-color: var(--glass-edge); color: var(--light-text); box-shadow: inset 0 1px 0 var(--glass-edge), 0 4px 12px var(--scene-shadow); }
+.btn--ghost-light:hover, .nav__cta:hover { background: var(--glass); color: var(--light-text); border-color: var(--button-top); }
+.btn:active, .nav__cta:active { transform: translateY(2px); box-shadow: inset 0 2px 4px var(--scene-shadow); }
+:where(a, button, input, summary):focus-visible { outline: 3px solid var(--focus); outline-offset: 5px; }
+.nav, .hero, .ambient, .entry { --focus: #8bdb63; }
+
+.nav { gap: 12px; background: linear-gradient(180deg, var(--glass), transparent); }
+.nav.is-solid { background: var(--glass); border-color: var(--glass-edge); box-shadow: inset 0 1px 0 var(--glass-edge), 0 8px 32px var(--scene-shadow); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+.nav__links { gap: clamp(10px, 1.3vw, 22px); }
+.nav__links a { display: inline-flex; align-items: center; min-height: 44px; font-size: .68rem; letter-spacing: .1em; color: var(--light-muted); }
+.nav__actions { gap: 8px; }
+.nav__lang, .nav__ig, .ambient__toggle {
+  min-width: 44px; min-height: 44px; border-radius: var(--radius-control);
+  color: var(--light-text); background: linear-gradient(145deg, #283321, #11180d);
+  border: 1px solid var(--glass-edge);
+  box-shadow: inset 0 1px 0 var(--glass-edge), 0 3px 8px var(--scene-shadow);
+}
+.nav__ig svg, .ambient__icon { width: 20px; height: 20px; stroke-width: 1.75; transition: transform 240ms ease-out; }
+.nav__cta { font-size: .7rem; letter-spacing: .08em; padding-inline: 14px; }
+.nav__brand img { height: 60px; }
+.nav.is-solid .nav__brand img { height: 54px; }
+.ambient { background: var(--glass); }
+.entry { background: radial-gradient(ellipse at 50% 20%, #26351d, #080a07 70%); overflow-y: auto; }
+.entry__content { padding: clamp(24px, 5vw, 48px); width: min(680px, 100%); border: 1px solid var(--glass-edge); border-radius: 24px; background: linear-gradient(150deg, rgb(255 255 255 / .045), transparent); box-shadow: inset 0 1px 0 var(--glass-edge), 0 24px 80px var(--scene-shadow); }
+.entry__choices .btn { padding-inline: 22px; }
+.hero__head { text-shadow: 0 2px 2px var(--scene-shadow), 0 12px 40px var(--scene-shadow); }
+.hero__claim { border-radius: 4px; box-shadow: inset 0 1px 0 var(--surface-highlight), 0 4px 14px var(--scene-shadow); }
+
+/* One transform surface per card; glare is a translated, pre-painted layer. */
+.depth-card { isolation: isolate; transform: perspective(1000px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)); transition: transform 300ms ease-out; }
+.depth-card::after { content: ''; position: absolute; inset: 0; border-radius: inherit; overflow: hidden; pointer-events: none; background: radial-gradient(ellipse at 50% 0%, var(--glare), transparent 65%); opacity: 0; transform: translate(var(--glare-x, 0px), var(--glare-y, 0px)); transition: opacity 300ms ease-out, transform 300ms ease-out; }
+.depth-card.is-lit::after { opacity: 1; }
+.reveal { transition-duration: 400ms; }
+.depth-enter { animation: panel-enter 400ms ease-out both; animation-delay: var(--enter-delay, 0ms); }
+@keyframes panel-enter { from { opacity: 0; translate: 0 16px; } to { opacity: 1; translate: 0 0; } }
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover, .nav__cta:hover { transform: translateY(-2px); }
+  .btn:active, .nav__cta:active { transform: translateY(2px); }
+  .nav__ig:hover svg, .ambient__toggle:hover svg { transform: rotate(-6deg); }
+}
+@media (max-width: 1100px) and (min-width: 781px) {
+  .nav { flex-wrap: wrap; padding: 8px 24px; }
+  .nav__links { order: 3; width: 100%; justify-content: space-between; }
+  .nav__links a { min-height: 32px; }
+  .scrub__overlay { padding-top: 144px; }
+  [id] { scroll-margin-top: 130px; }
+}
+@media (max-width: 780px) {
+  .nav { padding-inline: 12px; gap: 6px; }
+  .nav__brand img, .nav.is-solid .nav__brand img { height: 48px; }
+  .nav__actions { gap: 5px; }
+  .nav__cta { padding-inline: 9px; font-size: .62rem; letter-spacing: .02em; }
+  .hero__head { font-size: clamp(2.1rem, 7.4vw, 3.6rem); line-height: 1.04; }
+  .hero__cta { gap: 12px; }
+  .btn, .store .btn { overflow-wrap: anywhere; }
+  .contact { grid-template-columns: 1fr; gap: 8px; }
+  .contact dd { margin-bottom: 12px; overflow-wrap: anywhere; }
+  .contact dd a { display: inline-block; min-height: 44px; padding-block: 10px; }
+  .entry { padding: 16px; }
+  .entry__content { padding: 28px 20px; }
+}
+@media (max-width: 360px) {
+  .nav__brand img, .nav.is-solid .nav__brand img { height: 38px; }
+  .nav__actions { gap: 3px; }
+  .nav__cta { padding-inline: 6px; }
+  .nav__lang { padding-inline: 6px; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .nav.is-solid, .ambient, .btn--ghost-light { background: #10160f; backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+@media (prefers-reduced-motion: reduce), (hover: none), (pointer: coarse) {
+  .depth-card { transform: none; }
+  .depth-card::after { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+  .hero { transform: none !important; }
+  .btn:hover, .nav__cta:hover, .nav__ig:hover svg, .ambient__toggle:hover svg { transform: none; }
+}
